@@ -15,31 +15,30 @@ header {
     background-clip: border-box;
     background-attachment:fixed;
     background-position: center;
-    padding: 5%;
+    padding: 10%;
     text-align: center;
     font-size: 25px;
 }
 
 .logo1 {
-    position:sticky;
-    margin: 0% 20%;
+    position: absolute;
+    left: 0%;
+    top: 1%;
     padding: 1%;
-    height: 30%;
-    width: 20%;
+    height: 10%;
+    width: 15%;
 }
 
-.logo2 {
-    position: sticky;
-    height: 50%;
-    width: 60%;
-    border-radius: 10%;
-    background-attachment:fixed;
+.footerlogo{
+   position:absolute;
+    height: 5%;
+    width: auto;
 }
 
 .clock {
-    position:sticky;
-    margin: 0%;
-    padding: 0%;
+    position: absolute;
+    left: 75%;
+    top: 5%;
     height: 20%;
     width: 25%;
     border:none;
@@ -47,34 +46,36 @@ header {
 
 /* Style the navigation bar*/
 nav {
-    margin-top: 5%;
-    margin-bottom: 0%;
-      display: block;
-      padding: 0%;
-      overflow: hidden;
-      background-color: transparent;
-      text-align: center;
-      grid-area: nav;
-  }
-  
-      nav a {
-          float:none;
-          color: #f2f2f2;
-          text-align: center;
-          padding: 5%;
-          text-decoration: none;
-          font-size: 25px;
-      }
-  
-          nav a:hover {
-              background-color: #AFD2E9;
-              color: black;
-          }
-  
-          nav a.active {
-              background-color: rgb(175, 210, 233);
-              color: black;
-          }
+    display: block;
+    position: absolute;
+    top:5%;
+    left:2%;
+    right:50%;
+    width: 90%;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    grid-area: nav;
+}
+
+    nav a {
+        float:none;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 5%;
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+        nav a:hover {
+            background-color: #AFD2E9;
+            color: black;
+        }
+
+        nav a.active {
+            background-color: #AFD2E9;
+            color: black;
+        }
 
 /* The grid container */
 body {
