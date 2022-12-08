@@ -1,166 +1,50 @@
-html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="CSS/Form.css">
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <title>Form</title>
+</head>
+<body>
+    <header>
 
-* {
-    box-sizing: border-box;
-}
+        <a href="Home.html"><img src="images/Techtips2.png" class="logo1" alt="Logo"></a>
+        <iframe class="clock" src="https://free.timeanddate.com/clock/i8meby8t/n3443/tlbg/fn15/fs16/fcafd2e9/tct/pct/ftb/tt0/tb4" frameborder="0" allowtransparency="true"></iframe>
+   
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="Shop.html">Shop</a>
+            <a href="About.html">About</a>
+            <a class="active" href="Form.html">Form</a>
+        </nav>
+        
+    </header>
 
-/* Style the header */
-header {
-    grid-area: header;
-    background-image: url("../images/Linus\ logo.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-clip: border-box;
-    background-attachment:fixed;
-    background-position: center;
-    padding: 10%;
-    text-align: center;
-    font-size: 25px;
-}
+ <article>
+    <h4><Span>Billing info</Span></h4>
+    <form action="Form.html" method="post" name="form">
+    <input type="text" id="Username" name="Username" placeholder="Name..."><br><br>
+    <input type="text" id="Username" name="Username" placeholder="Family Name..."><br><br>
+    <input type="Password" id="PIN" name="PIN" placeholder="PIN..."><br><br>
+    <label for="book">Pick a date and time for your booking:</label><br>
+    <input id="book" type="datetime-local" name="bookdate"><br><br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear form"><br>
+    </form>
+</article>
 
-.logo1 {
-    position: absolute;
-    left: 0%;
-    top: 1%;
-    padding: 1%;
-    height: 10%;
-    width: 15%;
-}
+<aside>
+    <p><span>Simply Perfect!
+    </span></p>
+    </aside>
 
-.footerlogo{
-    position:absolute;
-     height: 5%;
-     width: auto;
- }
+    <footer><p>All rights reserved 2022, Tech Tips Group
+        <a href="https://github.com/InsertNicknameHere00/Web-Project" target="_blank"><img src="images/footericon.png" class="footerlogo"></a>
+    </p>
+</footer>
 
-.clock {
-    position: absolute;
-    left: 75%;
-    top: 5%;
-    height: 20%;
-    width: 25%;
-    border:none;
-}
-
-/* Style the navigation bar*/
-nav {
-      display: block;
-      position: absolute;
-      top:5%;
-      left:2%;
-      right:50%;
-      width: 90%;
-      overflow: hidden;
-      background-color: transparent;
-      text-align: center;
-      grid-area: nav;
-  }
-  
-      nav a {
-          float:none;
-          color: #f2f2f2;
-          text-align: center;
-          padding: 5%;
-          text-decoration: none;
-          font-size: 25px;
-      }
-  
-          nav a:hover {
-              background-color: #AFD2E9;
-              color: black;
-          }
-  
-          nav a.active {
-              background-color: #AFD2E9;
-              color: black;
-          }
-/* The grid container */
-body {
-    background-color: #A9A9A9;
-    display: grid;
-    grid-column-gap: 0%;
-    grid-template-areas:
-        'header header header header header header'
-        'nav nav nav nav nav nav'
-        'left middle middle middle middle middle'
-        'footer footer footer footer footer footer';
-}
-
-/* Style the article */
-article {
-    grid-area: left;
-    padding: 0%;
-    background-color: transparent;
-    text-align: center;
-    font-size: 35px;    
-    border: 2px solid #A9A9A9;
-  }
-
-  /*stylize the right-hand side pictures*/
-  aside {
-    grid-area: middle;
-    background-color: transparent;
-    background-image: url("../images/formbackground.jpg"), url("../images/formbackground1.jpg");
-    background-size:100% 50%;
-    background-position: top, bottom;
-    background-repeat:no-repeat,no-repeat;
-    padding: 45%;
-  }
-
-/* Style the footer */
-footer {
-    grid-area: footer;
-    background-color: #5C5D67;
-    padding: 1%;
-    text-align: center;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    body {
-        grid-template-areas:
-            'header header header header header header'
-            'nav nav nav nav nav nav'
-            'left middle middle middle middle middle'
-            'footer footer footer footer footer footer';
-    }
-}
- 
-/*stylize the form*/
-form {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:brown;
-    display: block;
-    background-color: #5C5D67;
-    border: 10px ridge #A9A9A9;
-    padding: 3%;
-    margin: 0% 15%;
-    font-size: 25px;
-    text-align: center;
-    align-content: center;
-    width:70%;
-    height: 80%;
-    max-width: 500px;
-}
-
-/*stylize the form buttons*/
-input,
-button {
-	color: brown;
-	border: 2px solid #A9A9A9;
-	padding: 2%;
-	font-size: 100%;
-	background: #f2f2f2;
-	border-radius: 1%;
-	width: 100%;
-}
-
-/*stylize the extra text*/
-span{
-    font-family: 'Aclonica';
-    font-size: 35px;
-    color:brown;
-    text-align: center;
-}
+</body>
+</html>
