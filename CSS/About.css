@@ -30,10 +30,10 @@ header {
 }
 
 .footerlogo{
-   position:absolute;
-    height: 5%;
-    width: auto;
-}
+    position:absolute;
+     height: 4%;
+     width: auto;
+ }
 
 .clock {
     position: absolute;
@@ -95,7 +95,7 @@ body {
     padding: 10%;
     background-color: transparent;
     border: 2px solid #a9a9a9;
-    background-image: linear-gradient(to top, rgba(242,242,242, 0.6), rgb(169, 169, 169, 0.75)) ,url("../images/aboutbackground.png");
+    background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(169, 169, 169, 0.9)) ,url("../images/aboutbackground.png");
     background-size: cover;
     background-repeat:no-repeat;
     background-clip: border-box;
