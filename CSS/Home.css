@@ -35,7 +35,7 @@ header {
 
 .footerlogo{
     position:absolute;
-     height: 5%;
+     height: 4%;
      width: auto;
  }
 
@@ -88,7 +88,7 @@ nav {
       'header header header header header header' 
       'nav nav nav nav nav nav' 
       'middle middle middle middle middle middle' 
-      'footer footer footer footer footer footer';
+      'left footer footer footer footer footer';
   } 
   
   /* Style the article */
@@ -118,9 +118,67 @@ nav {
         'header header header header header header' 
         'nav nav nav nav nav nav' 
         'middle middle middle middle middle middle' 
-        'footer footer footer footer footer footer';
+        'left footer footer footer footer footer';
     }
   }
 
+  .footerleft{
+    grid-area: left;
+    background-color: #5C5D67;
+    padding: 1%;
+    text-align: center;
+  }
+/*stylize the form*/
+ form {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position:static;
+    color:brown;
+    display: block;
+    background-color: #5C5D67;
+    border: none;
+    padding: 1%;
+    margin: 0%;
+    font-size: 18px;
+    text-align: center;
+    align-content: center;
+    max-width: 400px;
+}
 
+/*stylize the form buttons*/
+input,
+button {
+	color: brown;
+	border: 2px solid #A9A9A9;
+	padding: 2%;
+	font-size: 100%;
+	background: #f2f2f2;
+	border-radius: 1%;
+	width: 100%;
+}
 
+/*stylize the form textarea*/
+textarea {
+	color: brown;
+	border: 2px solid #A9A9A9;
+	padding: 2%;
+	font-size: 100%;
+	background: #f2f2f2;
+	border-radius: 1%;
+	width: 100%;
+}
+
+/*stylize the extra text*/
+span{
+    font-family: 'Aclonica';
+    font-size: 40px;
+    color:brown;
+    text-align: center;
+}
+
+.map{
+    border:none;
+    grid-area: footer;
+    width: 600px;
+    height: 400px;
+    max-width: 600px;
+}
