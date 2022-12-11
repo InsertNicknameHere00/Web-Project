@@ -31,11 +31,11 @@ header {
 
 .footerlogo{
     position:absolute;
-     height: 5%;
+     height: 4%;
      width: auto;
  }
 
-.clock {
+ .clock {
     position: absolute;
     left: 75%;
     top: 5%;
@@ -131,16 +131,17 @@ footer {
 /*stylize the form*/
 form {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position:static;
     color:brown;
     display: block;
     background-color: #5C5D67;
-    border: 10px ridge #A9A9A9;
+    border: 5px ridge #A9A9A9;
     padding: 3%;
-    margin: 0% 15%;
-    font-size: 25px;
+    margin: 0% 10%;
+    font-size: 20px;
     text-align: center;
     align-content: center;
-    width:70%;
+    width:80%;
     height: 80%;
     max-width: 500px;
 }
@@ -157,10 +158,21 @@ button {
 	width: 100%;
 }
 
+/*stylize the form textarea*/
+textarea {
+	color: brown;
+	border: 2px solid #A9A9A9;
+	padding: 2%;
+	font-size: 100%;
+	background: #f2f2f2;
+	border-radius: 1%;
+	width: 100%;
+}
+
 /*stylize the extra text*/
 span{
     font-family: 'Aclonica';
-    font-size: 35px;
+    font-size: 40px;
     color:brown;
     text-align: center;
 }
