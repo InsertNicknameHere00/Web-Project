@@ -35,11 +35,11 @@ header {
 
 .footerlogo{
     position:absolute;
-     height: 5%;
+     height: 4%;
      width: auto;
  }
 
-.clock {
+ .clock {
     position: absolute;
     left: 75%;
     top: 5%;
