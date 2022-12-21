@@ -28,34 +28,27 @@ header {
     position: absolute;
     left: 0%;
     top: 1%;
-    padding: 1%;
+    padding:1%;
     height: 10%;
-    width: 15%;
+    width: 10%;
 }
 
 .footerlogo{
     position:absolute;
-     height: 4%;
+     height: 3%;
      width: auto;
  }
 
-.clock {
-    position: absolute;
-    left: 75%;
-    top: 5%;
-    height: 20%;
-    width: 25%;
-    border:none;
-}
+
 
 /* Style the navigation bar*/
 nav {
-    display: block;
+    display: inline-block;
     position: absolute;
     top:5%;
-    left:2%;
-    right:50%;
-    width: 90%;
+    left:0%;
+    right:0%;
+    width: 100%;
     overflow: hidden;
     background-color: transparent;
     text-align: center;
@@ -80,7 +73,8 @@ nav {
             background-color: #AFD2E9;
             color: black;
         }
-  /* The grid container */
+
+  /* Style The grid container */
   body {
     display: grid;
     grid-column-gap: 0%;
@@ -88,7 +82,7 @@ nav {
       'header header header header header header' 
       'nav nav nav nav nav nav' 
       'middle middle middle middle middle middle' 
-      'left footer footer footer footer footer';
+      'left left left footer footer footer';
   } 
   
   /* Style the article */
@@ -111,23 +105,106 @@ nav {
     
   }
   
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-  @media (max-width: 600px) {
-    body  {
-      grid-template-areas: 
-        'header header header header header header' 
-        'nav nav nav nav nav nav' 
-        'middle middle middle middle middle middle' 
-        'left footer footer footer footer footer';
-    }
-  }
+/* Responsive Layout */
+@media only screen and (min-width: 1025px) and (max-width: 1920px) { 
+    nav { display: inline-block-block; vertical-align: middle;} 
 
+    body  {
+        grid-template-areas: 
+          'header header header header header header' 
+          'nav nav nav nav nav nav' 
+          'middle middle middle middle middle middle' 
+          'left left left footer footer footer';
+      }
+
+      header{width: 100%;}
+      nav{width:100%;}
+      .middle{width: 100%;}
+      .left{width: 100%;}
+      form{width:100%;}
+      .footerleft{width: 100%;}
+      .span{font-size:auto;}
+      .logo1{width: 10%; height: auto;}
+      
+} 
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) { 
+    nav { display: inline-block; vertical-align: middle; } 
+
+    body  {
+        grid-template-areas: 
+          'header header header header header header' 
+          'nav nav nav nav nav nav' 
+          'middle middle middle middle middle middle' 
+          'left left left footer footer footer';
+      }
+
+      header{width: 100%;}
+      nav{width:100%;}
+      .middle{width: 75%;}
+      .left{width: 75%;}
+      form{width:100%;}
+      .footerleft{width: 100%;}
+      .span{font-size:auto;}
+      .logo1{width: 15%; height: auto;}
+      
+} 
+
+@media only screen and (min-width: 481px) and (max-width: 767px) { 
+    nav { display: inline-block; vertical-align: middle; } 
+
+    body  {
+        grid-template-areas: 
+        'header header header header' 
+        'nav nav nav nav' 
+        'middle middle middle middle' 
+        'left left left left'
+        'footer footer footer footer'
+      }
+
+      header{width: 100%;}
+      nav{width:100%;}
+      .middle{width: 60%;}
+      .left{width: 60%;}
+      form{width:100%;}
+      .footerleft{width: 100%;}
+      .span{font-size:auto;}
+      .logo1{width: 15%; height: auto;}
+      
+} 
+
+@media only screen and (min-width: 200px) and (max-width: 480px) { 
+    nav { display: inline-block; vertical-align: middle; } 
+
+    body  {
+        grid-template-areas: 
+          'header header' 
+          'nav nav' 
+          'middle middle' 
+          'left left'
+          'footer footer';
+      }
+
+      header{width: 100%;}
+      nav{width:100%;}
+      .middle{width: 50%;}
+      .left{width: 50%;}
+      form{width:100%;}
+      .footerleft{width: 100%;}
+      .span{font-size:auto;}
+      .logo1{width: 15%; height: auto;}
+      
+} 
+
+/*stylize the contact info in footer*/
   .footerleft{
     grid-area: left;
     background-color: #5C5D67;
     padding: 1%;
     text-align: center;
   }
+
+
 /*stylize the form*/
  form {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -141,7 +218,7 @@ nav {
     font-size: 18px;
     text-align: center;
     align-content: center;
-    max-width: 400px;
+    max-width: 700px;
 }
 
 /*stylize the form buttons*/
@@ -169,8 +246,7 @@ textarea {
 
 /*stylize the extra text*/
 span{
-    font-family: 'Aclonica';
-    font-size: 40px;
+    font-size: 25px;
     color:brown;
     text-align: center;
 }
