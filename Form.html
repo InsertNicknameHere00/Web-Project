@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="CSS/Form.css">
-    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
     <title>Form</title>
 </head>
 <body>
     <header>
 
         <a href="Home.html"><img src="images/Techtips2.png" class="logo1" alt="Logo"></a>
-        <iframe class="clock" src="https://free.timeanddate.com/clock/i8meby8t/n3443/tlbg/fn15/fs16/fcafd2e9/tct/pct/ftb/tt0/tb4"></iframe>
 
         <nav>
             <a href="Home.html">HOME</a>
@@ -24,23 +22,23 @@
     </header>
 
  <article>
-    <h4><Span>Billing info</Span></h4>
+    <fieldset>
+    <legend><h4><Span>Billing info</Span></h4></legend>
     <form action="Form.html" method="post" name="form">
-    <input type="text" id="Username" name="Username" placeholder="Name..."><br><br>
-    <input type="text" id="Surname" name="Surname" placeholder="Surname..."><br><br>
-    <input type="Password" id="PIN" name="PIN" placeholder="PIN..."><br><br>
-    <input type="tel" id="telephone" name="telephone" placeholder="Phone number..."><br><br>
+    <input type="text" id="Username" name="Username" placeholder="Name..." required><br><br>
+    <input type="text" id="Surname" name="Surname" placeholder="Surname..." required><br><br>
+    <input type="Password" id="PIN" name="PIN" placeholder="PIN..." required><br><br>
+    <input type="tel" id="telephone" name="telephone" placeholder="Phone number..." required><br><br>
     <textarea id="area" name="area" placeholder="Message..." rows="4" cols="40"></textarea><br>
     <label for="book">PICK A DATE AND TIME TO BOOK:</label><br>
-    <input id="book" type="datetime-local" name="bookdate"><br><br>
+    <input id="book" type="datetime-local" name="bookdate" required><br><br>
     <input type="submit" value="Submit">
     <input type="reset" value="Clear form">
     </form>
+</fieldset>
 </article>
 
 <aside>
-    <p><span>Simply Perfect!
-    </span></p>
     </aside>
 
     <footer><p>All rights reserved 2022, Tech Tips Group
