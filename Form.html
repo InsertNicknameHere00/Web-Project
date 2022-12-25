@@ -22,19 +22,25 @@
     </header>
 
  <article>
-    <fieldset>
-    <legend><h4><Span>Billing info</Span></h4></legend>
-    <form action="Form.html" method="post" name="form">
-    <input type="text" id="Username" name="Username" placeholder="Name..." required><br><br>
-    <input type="text" id="Surname" name="Surname" placeholder="Surname..." required><br><br>
-    <input type="Password" id="PIN" name="PIN" placeholder="PIN..." required><br><br>
-    <input type="tel" id="telephone" name="telephone" placeholder="Phone number..." required><br><br>
-    <textarea id="area" name="area" placeholder="Message..." rows="4" cols="40"></textarea><br>
-    <label for="book">PICK A DATE AND TIME TO BOOK:</label><br>
-    <input id="book" type="datetime-local" name="bookdate" required><br><br>
-    <input type="submit" value="Submit">
-    <input type="reset" value="Clear form">
-    </form>
+     <fieldset>
+        <legend><h4><Span>Appointment</Span></h4></legend>
+        <form action="Form.html" method="post" name="form">
+            <input type="text" id="Name" name="Name" placeholder="Name..." required><br><br>
+            <input type="text" id="Surname" name="Surname" placeholder="Surname..." required><br><br>
+            <input type="tel" id="phone" name="phone" placeholder="08(789)..." pattern="[0]{1}[8]{1}[7-9]{1}[0-9]{7}" required><br>
+            <label for="pc">PC</label>
+            <input type="radio" id="pc" name="machine" value="pc" required>
+            <label for="laptop">Laptop</label><br />
+            <input type="radio" id="laptop" name="machine" value="laptop" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" min="2023-01-01" max="2023-01-31" required>
+            <label for="date">Hour:</label>
+            <input type="number" id="hour" name="hour" min="8" max="16" required>
+            <label for="date">Minutes:</label>
+            <input type="number" id="minutes" name="minutes" min="0" max="50" step="10" required>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear form">
+        </form>
 </fieldset>
 </article>
 
