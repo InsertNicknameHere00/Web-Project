@@ -124,6 +124,41 @@ footer {
     padding: 1%;
     text-align: center;
 }
+
+/*stylize the form*/
+form {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position:relative;
+    color:brown;
+    background-color: transparent;
+    font-size: 16px;
+    text-align: left;
+    align-content: center;
+    max-width: 100%;
+}
+
+/*stylize the form buttons*/
+input,
+button {
+	color: brown;
+	border: 2px solid #A9A9A9;
+	padding: 2%;
+	font-size: 100%;
+	background: #f2f2f2;
+	border-radius: 1%;
+	width: 100%;
+}
+
+/*stylize the form textarea*/
+textarea {
+	color: brown;
+	border: 2px solid #A9A9A9;
+	padding: 2%;
+	font-size: 100%;
+	background: #f2f2f2;
+	border-radius: 1%;
+	width: 100%;
+}
   
 /* Responsive Layout */
 @media only screen and (min-width: 1025px) and (max-width: 1920px) { 

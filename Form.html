@@ -8,43 +8,59 @@
     <title>Form</title>
 </head>
 <body>
-    <header>
 
+    <div class="navleft">
         <a href="Home.html"><img src="images/Techtips2.png" class="logo1" alt="Logo"></a>
-
         <nav>
             <a href="Home.html">HOME</a>
-            <a href="Shop.html">SHOP</a>
+            <a href="Services.html">SERVICES</a>
             <a href="About.html">ABOUT</a>
-            <a class="active" href="Form.html">FORM</a>
+            <a class="active" href="Form.html">APPOINTMENT</a>
         </nav>
+    </div>
+    
+    <header>
         
     </header>
 
  <article>
-     <fieldset>
+    <fieldset>
         <legend><h4><Span>Appointment</Span></h4></legend>
         <form action="Form.html" method="post" name="form">
             <input type="text" id="Name" name="Name" placeholder="Name..." required><br><br>
             <input type="text" id="Surname" name="Surname" placeholder="Surname..." required><br><br>
-            <input type="tel" id="phone" name="phone" placeholder="08(789)..." pattern="[0]{1}[8]{1}[7-9]{1}[0-9]{7}" required><br>
-            <label for="pc">PC</label>
-            <input type="radio" id="pc" name="machine" value="pc" required>
-            <label for="laptop">Laptop</label><br />
-            <input type="radio" id="laptop" name="machine" value="laptop" required>
+            <input type="email" id="E-mail" name="E-mail" placeholder="E-mail..." required><br><br>
+            <input type="tel" id="phone" name="phone" placeholder="08(789)..." pattern="[0]{1}[8]{1}[7-9]{1}[0-9]{7}" required>
+            <label for="machine">Select Machine</label>
+            <select id="machine" name="Machine" required>
+                <option value="PC">PC</option>
+                <option value="LAPTOP">Laptop</option>
+                <option value="LAPTOP">Macbook</option>
+              </select><br>
             <label for="date">Date:</label>
             <input type="date" id="date" name="date" min="2023-01-01" max="2023-01-31" required>
             <label for="date">Hour:</label>
             <input type="number" id="hour" name="hour" min="8" max="16" required>
             <label for="date">Minutes:</label>
-            <input type="number" id="minutes" name="minutes" min="0" max="50" step="10" required>
+            <input type="number" id="minutes" name="minutes" min="0" max="50" step="5" required><br><br>
             <input type="submit" value="Submit">
             <input type="reset" value="Clear form">
-        </form>
 </fieldset>
+
 </article>
 
 <aside>
+<fieldset><img src="images/aboutbackground.jpg">
+    <legend><h4><Span>Feedback</Span></h4></legend>
+        <p><h4>Hey everyone,</h4>
+
+        Did you know that the number of TechTips fans has doubled since last year? We must be doing something right! And whatever that is, we want to keep doing it. So tell us!
+        
+        If you have 90 seconds today, we would love it if you went to <a href="RateUs.html">FEEDBACK</a> and wrote a review. A few sentences is all it takes! This enables us to continue providing the best experience possible for you, and helps others understand how TechTips can make their life easier.
+        
+        <br><br>Thank you in advance!</p>
+    </fieldset>
+
     </aside>
 
     <footer><p>All rights reserved 2022, Tech Tips Group

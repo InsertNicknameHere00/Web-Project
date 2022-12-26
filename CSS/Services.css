@@ -99,7 +99,7 @@ body {
     grid-template-areas:
         'navleft navleft navleft nav nav nav'
         'header header header header header header'
-        'left left left left middle middle'
+        'left middle middle middle middle middle'
         'footer footer footer footer footer footer';
 }
 
@@ -113,16 +113,19 @@ article {
     border: none;
   }
 
-  /*stylize the right-hand side*/
+  /*stylize the right-hand side pictures*/
   aside {
     grid-area: middle;
     background-color: transparent;
+    background-image: url("../images/formbackground.jpg"), url("../images/formbackground1.jpg");
+    background-size:90% 50%;
+    background-position: top, bottom;
+    background-repeat:no-repeat,no-repeat;
+    padding: 45%;
     width:auto;
     height:auto;
     max-width: 100%;
     max-height: 100%;
-    font-size: 16px;  
-    border: none;
   }
 
 /* Style the footer */
@@ -135,13 +138,13 @@ footer {
 
      /* Responsive layout */
      @media only screen and (min-width: 1025px) and (max-width: 1920px) { 
-        nav { display: inline-block; vertical-align: middle;} 
+        nav { display: inline-block-block; vertical-align: middle;} 
 
         body  {
             grid-template-areas: 
               'header header navleft nav header header' 
-              'left left left left middle middle' 
-              'footer footer footer footer footer footer';
+              'middle middle middle middle middle middle' 
+              'left left left footer footer footer';
           }
     
           header{width: 100%;}
@@ -162,16 +165,16 @@ footer {
             grid-template-areas: 
               'navleft navleft navleft nav nav nav' 
               'header header header header header header' 
+              'middle middle middle middle middle middle' 
               'left left left left left left'
-              'middle middle middle middle middle middle'
               'footer footer footer footer footer footer';
           }
     
           header{width: 100%;}
           nav{width:100%;}
-          .middle{width: 100%;}
-          .left{width: 100%;}
-          form{width:100%;}
+          .middle{width: 75%;}
+          .left{width: 75%;}
+          form{width:75%;}
           span{font-size:auto;}
           footer{width: 75%;}
           .logo1{width: 15%; height: auto;}
@@ -185,8 +188,8 @@ footer {
                 grid-template-areas: 
                   'navleft navleft nav nav nav' 
                   'header header header header' 
-                  'left left left left'
                   'middle middle middle middle' 
+                  'left left left left'
                   'footer footer footer footer';
               }
         
@@ -208,8 +211,8 @@ footer {
                 grid-template-areas:
                   'navleft nav' 
                   'header header' 
+                  'middle middle' 
                   'left left'
-                  'middle middle'
                   'footer footer';
               }
         
@@ -230,13 +233,13 @@ footer {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position:static;
     color:brown;
-    display: inline-block;
+    display: block;
     background-color: #5C5D67;
     border: none;
     padding: 1%;
     margin: 0%;
-    font-size: 25px;
-    text-align: left;
+    font-size: 16px;
+    text-align: center;
     align-content: center;
     max-width: 700px;
 }
