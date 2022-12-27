@@ -55,15 +55,17 @@ nav {
     background-color: #A9A9A9;
     text-align:right;
     grid-area: nav;
+    z-index:1;
 }
 
     nav a {
         float:inline-block;
         color: #5C5D67;
-        padding: 4%;
+        padding: 3%;
         margin:0%;
         text-decoration: none;
-        font-size: 18px;    
+        font-size: 18px;
+        z-index:1;
     }
 
         nav a:hover {
@@ -72,6 +74,7 @@ nav {
             box-shadow: #5C5D67 5px 0px 5px;
             text-decoration:overline;
             transition:background-color 0.5s;
+            z-index:1;
         }
 
         nav a.active {
@@ -79,6 +82,7 @@ nav {
             text-decoration:overline;
             color: black;
             box-shadow: none;
+            z-index:1;
         }
 
         .navleft {
@@ -89,6 +93,7 @@ nav {
             overflow: hidden;
             background-color: #A9A9A9;
             grid-area: navleft;
+            z-index:1;
         }
         
 /* Style The grid container */
@@ -111,6 +116,14 @@ article {
     text-align: center;
     font-size: 16px;    
     border: none;
+    animation-name:transitionanim;
+    animation-duration: 2s;   
+    animation-timing-function: ease-in;
+  }
+
+  @keyframes transitionanim {
+    from{opacity:0;}
+    to{opacity: 1;}
   }
 
   /*stylize the right-hand side pictures*/
@@ -126,6 +139,9 @@ article {
     height:auto;
     max-width: 100%;
     max-height: 100%;
+    animation-name:transitionanim;
+    animation-duration: 2s;   
+    animation-timing-function: ease-in;
   }
 
 /* Style the footer */

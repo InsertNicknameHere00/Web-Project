@@ -55,15 +55,17 @@ nav {
     background-color: #A9A9A9;
     text-align:right;
     grid-area: nav;
+    z-index:1;
 }
 
     nav a {
         float:inline-block;
         color: #5C5D67;
-        padding: 4%;
+        padding: 3%;
         margin:0%;
         text-decoration: none;
-        font-size: 18px;    
+        font-size: 18px;
+        z-index:1;
     }
 
         nav a:hover {
@@ -72,6 +74,7 @@ nav {
             box-shadow: #5C5D67 5px 0px 5px;
             text-decoration:overline;
             transition:background-color 0.5s;
+            z-index:1;
         }
 
         nav a.active {
@@ -79,6 +82,7 @@ nav {
             text-decoration:overline;
             color: black;
             box-shadow: none;
+            z-index:1;
         }
 
         .navleft {
@@ -89,6 +93,7 @@ nav {
             overflow: hidden;
             background-color: #A9A9A9;
             grid-area: navleft;
+            z-index:1;
         }
 
   /* Style The grid container */
@@ -109,15 +114,15 @@ nav {
     background-color: transparent;
     text-align: center;
     font-size: 16px;    
+    color: white;
     border:none;
   }
   
   /* Style the transition div */
   .transition1{
-    border-radius: 10%;
     display: inline-block;
     position: relative;
-    width: 300px;
+    width: 700px;
     height: 300px;
     overflow: hidden;
     background-color: transparent;
@@ -128,20 +133,28 @@ nav {
     background-attachment:local;
     background-position: center;
     border:none;
-    transition: width 2s , height 2s, transform 2s;
+    transition: width 2s , height 2s, transform 2s, border-radius 2s;
+    animation-name:transitionanim;
+    animation-duration: 2s;   
+    animation-timing-function: ease-in;
+  }
+
+  @keyframes transitionanim {
+    from{opacity:0;}
+    to{opacity: 1;}
   }
 
   .transition1:hover{
-    width: 400px;
+    border-radius: 10%;
+    width: 700px;
     height: 400px;
     transform:rotate(5deg);
   }
 
   .transition2{
-    border-radius: 10%;
     display: inline-block;
     position: relative;
-    width: 300px;
+    width: 700px;
     height: 300px;
     overflow: hidden;
     background-color: transparent;
@@ -152,20 +165,23 @@ nav {
     background-attachment:local;
     background-position: center;
     border:none;
-    transition: width 2s , height 2s, transform 2s;
+    transition: width 2s , height 2s, transform 2s, border-radius 2s;
+    animation-name:transitionanim;
+    animation-duration: 2s;   
+    animation-timing-function: ease-in;
   }
 
   .transition2:hover{
-    width: 400px;
+    border-radius: 10%;
+    width: 700px;
     height: 400px;
     transform:rotate(-5deg);
   }
   
   .transition3{
-    border-radius: 10%;
     display: inline-block;
     position: relative;
-    width: 300px;
+    width: 700px;
     height: 300px;
     overflow: hidden;
     background-color: transparent;
@@ -176,20 +192,23 @@ nav {
     background-attachment:local;
     background-position: center;
     border:none;
-    transition: width 2s , height 2s, transform 2s;
+    transition: width 2s , height 2s, transform 2s, border-radius 2s;
+    animation-name:transitionanim;
+    animation-duration: 2s;   
+    animation-timing-function: ease-in;
   }
 
   .transition3:hover{
-    width: 400px;
+    border-radius: 10%;
+    width: 700px;
     height: 400px;
     transform:rotate(5deg);
   }
 
   .transition4{
-    border-radius: 10%;
     display: inline-block;
     position: relative;
-    width: 300px;
+    width: 700px;
     height: 300px;
     overflow: hidden;
     background-color: transparent;
@@ -200,11 +219,15 @@ nav {
     background-attachment:local;
     background-position: center;
     border:none;
-    transition: width 2s , height 2s, transform 2s;
+    transition: width 2s , height 2s, transform 2s, border-radius 2s;
+    animation-name:transitionanim;
+    animation-duration: 2s;   
+    animation-timing-function: ease-in;
   }
 
   .transition4:hover{
-    width: 400px;
+    border-radius: 10%;
+    width: 700px;
     height: 400px;
     transform:rotate(-5deg);
   }
@@ -347,7 +370,7 @@ a:link {
  form {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position:relative;
-    color:brown;
+    color: black;
     display: block;
     background-color: transparent;
     border: none;
@@ -362,7 +385,7 @@ a:link {
 /*stylize the form buttons*/
 input,
 button {
-	color: brown;
+	color: black;
 	border: 2px solid #A9A9A9;
 	padding: 2%;
 	font-size: 100%;
@@ -373,7 +396,7 @@ button {
 
 /*stylize the form textarea*/
 textarea {
-	color: brown;
+	color: black;
 	border: 2px solid #A9A9A9;
 	padding: 2%;
 	font-size: 100%;
@@ -385,7 +408,7 @@ textarea {
 /*stylize the extra text*/
 span{
     font-size: 25px;
-    color:brown;
+    color:white;
     text-align: center;
 }
 

@@ -55,15 +55,17 @@ nav {
     background-color: #A9A9A9;
     text-align:right;
     grid-area: nav;
+    z-index:1;
 }
 
     nav a {
         float:inline-block;
         color: #5C5D67;
-        padding: 4%;
+        padding: 3%;
         margin:0%;
         text-decoration: none;
-        font-size: 18px;    
+        font-size: 18px;
+        z-index:1;
     }
 
         nav a:hover {
@@ -72,6 +74,7 @@ nav {
             box-shadow: #5C5D67 5px 0px 5px;
             text-decoration:overline;
             transition:background-color 0.5s;
+            z-index:1;
         }
 
         nav a.active {
@@ -79,6 +82,7 @@ nav {
             text-decoration:overline;
             color: black;
             box-shadow: none;
+            z-index:1;
         }
 
         .navleft {
@@ -89,6 +93,7 @@ nav {
             overflow: hidden;
             background-color: #A9A9A9;
             grid-area: navleft;
+            z-index:1;
         }
         
 /* Style The grid container */
@@ -111,6 +116,9 @@ article {
     text-align: center;
     font-size: 16px;    
     border: none;
+    animation-name:transitionanim;
+    animation-duration: 2s;   
+    animation-timing-function: ease-in;
   }
 
   /*stylize the right-hand side*/
@@ -123,6 +131,14 @@ article {
     max-height: 100%;
     font-size: 16px;  
     border: none;
+    animation-name:transitionanim;
+    animation-duration: 2s;   
+    animation-timing-function: ease-in;
+  }
+
+  @keyframes transitionanim {
+    from{opacity:0;}
+    to{opacity: 1;}
   }
 
 /* Style the footer */
@@ -229,7 +245,7 @@ footer {
  form {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position:static;
-    color:brown;
+    color:white;
     display: inline-block;
     background-color: #5C5D67;
     border: none;
@@ -244,18 +260,7 @@ footer {
 /*stylize the form buttons*/
 input,
 button {
-	color: brown;
-	border: 2px solid #A9A9A9;
-	padding: 2%;
-	font-size: 100%;
-	background: #f2f2f2;
-	border-radius: 1%;
-	width: 100%;
-}
-
-/*stylize the form textarea*/
-textarea {
-	color: brown;
+	color: black;
 	border: 2px solid #A9A9A9;
 	padding: 2%;
 	font-size: 100%;
@@ -267,6 +272,6 @@ textarea {
 /*stylize the extra text*/
 span{
     font-size: 16px;
-    color:brown;
+    color:white;
     text-align: center;
 }
