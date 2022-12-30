@@ -26,7 +26,7 @@ function sub() {
                 }
             }
             if (flag == 1) {
-                alert("Invalid name!");
+                alert("Invalid surname!");
                 break;
             }
             else s = 1;
