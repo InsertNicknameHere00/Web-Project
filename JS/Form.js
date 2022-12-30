@@ -3,25 +3,33 @@ function sub() {
     var surname = document.getElementById("surname").value;
     var phone = document.getElementById("phone").value;
     var email = document.getElementById("email").value;
-    var n = 0, s = 0, p = 0, e = 0;
+    var n = 0, s = 0, p = 0, e = 0, flag = 0;
     while (true) {
         if (n == 0) {
             for (var i = 0; i < name.length; i++) {
                 if (!((name[i] >= 'a' && name[i] <= 'z') || (name[i] >= 'A' && name[i] <= 'Z'))) {
-                    alert("Invalid name!");
+                    flag = 1;
                     break;
                 }
             }
-            n = 1;
+            if (flag == 1) {
+                alert("Invalid name!");
+                break;
+            }
+            else n = 1;
         }
         else if (s == 0) {
             for (var i = 0; i < surname.length; i++) {
                 if (!((surname[i] >= 'a' && surname[i] <= 'z') || (surname[i] >= 'A' && surname[i] <= 'Z'))) {
-                    alert("Invalid surname!");
+                    flag = 1;
                     break;
                 }
             }
-            s = 1;
+            if (flag == 1) {
+                alert("Invalid name!");
+                break;
+            }
+            else s = 1;
         }
         else if (p == 0) {
             if (phone[0] != 0 && phone[1] != 8 && phone.length != 10) {
