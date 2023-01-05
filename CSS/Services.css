@@ -44,7 +44,27 @@ header {
      width: auto;
  }
 
+/*stylize the figures to the left*/
+.Figureleft{    
+float:left;
+width: auto;
+height: auto;
+overflow: hidden;
+border-radius:5%;
+background-color: #5C5D67;
+}
 
+/*stylize the figures to the right*/
+.Figureright{
+    float:right;
+    width: auto;
+height: auto;
+overflow: hidden;
+    border-radius:5%;
+    background-color: #5C5D67;
+}
+
+p { display: inline-block; }
 
 /* Style the navigation bar*/
 nav {
@@ -104,7 +124,7 @@ body {
     grid-template-areas:
         'navleft navleft navleft nav nav nav'
         'header header header header header header'
-        'left middle middle middle middle middle'
+        'left left left middle middle middle'
         'footer footer footer footer footer footer';
 }
 
@@ -129,16 +149,11 @@ article {
   /*stylize the right-hand side pictures*/
   aside {
     grid-area: middle;
+    padding: 0%;
     background-color: transparent;
-    background-image: url("../images/formbackground.jpg"), url("../images/formbackground1.jpg");
-    background-size:90% 50%;
-    background-position: top, bottom;
-    background-repeat:no-repeat,no-repeat;
-    padding: 45%;
-    width:auto;
-    height:auto;
-    max-width: 100%;
-    max-height: 100%;
+    text-align: center;
+    font-size: 16px;    
+    border: none;
     animation-name:transitionanim;
     animation-duration: 2s;   
     animation-timing-function: ease-in;
@@ -153,14 +168,16 @@ footer {
 }
 
      /* Responsive layout */
+     /* Imagine you are drawing on canvas, the more you stretch, the easier it fits*/
      @media only screen and (min-width: 1025px) and (max-width: 1920px) { 
         nav { display: inline-block-block; vertical-align: middle;} 
 
         body  {
             grid-template-areas: 
               'header header navleft nav header header' 
+              'left left left left left left'
               'middle middle middle middle middle middle' 
-              'left left left footer footer footer';
+              'footer footer footer footer footer footer';
           }
     
           header{width: 100%;}
@@ -181,8 +198,8 @@ footer {
             grid-template-areas: 
               'navleft navleft navleft nav nav nav' 
               'header header header header header header' 
-              'middle middle middle middle middle middle' 
               'left left left left left left'
+              'middle middle middle middle middle middle' 
               'footer footer footer footer footer footer';
           }
     
@@ -204,8 +221,8 @@ footer {
                 grid-template-areas: 
                   'navleft navleft nav nav nav' 
                   'header header header header' 
-                  'middle middle middle middle' 
                   'left left left left'
+                  'middle middle middle middle' 
                   'footer footer footer footer';
               }
         
@@ -227,8 +244,8 @@ footer {
                 grid-template-areas:
                   'navleft nav' 
                   'header header' 
-                  'middle middle' 
                   'left left'
+                  'middle middle' 
                   'footer footer';
               }
         

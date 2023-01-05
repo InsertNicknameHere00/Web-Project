@@ -21,7 +21,6 @@ header {
     background-position: center;
     padding: 10%;
     text-align: center;
-    font-size: 16px;    
 }
 
 .logo1 {
@@ -48,53 +47,54 @@ header {
 
 /* Style the navigation bar*/
 nav {
-    display: inline-block;
-    position:relative;
-    padding: 1%;
-    overflow: hidden;
-    background-color: #A9A9A9;
-    text-align:right;
-    grid-area: nav;
-    z-index:1;
+  display: inline-block;
+  position:relative;
+  padding: 1%;
+  overflow: hidden;
+  background-color: #A9A9A9;
+  color:#5C5D67;
+  text-align:right;
+  grid-area: nav;
+  z-index:1;
 }
 
-    nav a {
-        float:inline-block;
-        color: #5C5D67;
-        padding: 3%;
-        margin:0%;
-        text-decoration: none;
-        font-size: 18px;
-        z-index:1;
-    }
+  nav a {
+      float:inline-block;
+      color: #5C5D67;
+      padding: 3%;
+      margin:0%;
+      text-decoration: none;
+      font-size: 18px;
+      z-index:1;
+  }
 
-        nav a:hover {
-            background-color: #5C5D67;
-            color: #f2f2f2;
-            box-shadow: #5C5D67 5px 0px 5px;
-            text-decoration:overline;
-            transition:background-color 0.5s;
-            z-index:1;
-        }
+      nav a:hover {
+          background-color: #5C5D67;
+          color: #f2f2f2;
+          box-shadow: #5C5D67 5px 0px 5px;
+          text-decoration:overline;
+          transition:background-color 0.5s;
+          z-index:1;
+      }
 
-        nav a.active {
-            background-color: transparent;
-            text-decoration:overline;
-            color: black;
-            box-shadow: none;
-            z-index:1;
-        }
+      nav a.active {
+          background-color: transparent;
+          text-decoration:overline;
+          color: black;
+          box-shadow: none;
+          z-index:1;
+      }
 
-        .navleft {
-            display:inline-flex;
-            position:fixed;
-            top:0%;
-            width:100%;
-            overflow: hidden;
-            background-color: #A9A9A9;
-            grid-area: navleft;
-            z-index:1;
-        }
+      .navleft {
+          display:inline-flex;
+          position:fixed;
+          top:0%;
+          width:100%;
+          overflow: hidden;
+          background-color: #A9A9A9;
+          grid-area: navleft;
+          z-index:1;
+      }
 
   /* Style The grid container */
   body {
@@ -119,11 +119,19 @@ nav {
   }
   
   /* Style the transition div */
+.notranstext{
+  color:white;
+  font-size:18px;
+}
+
+p { display: inline-block; }
+
   .transition1{
     display: inline-block;
     position: relative;
     width: 700px;
-    height: 300px;
+    height: 200px;
+    font-size:0px;
     overflow: hidden;
     background-color: transparent;
     background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)) ,url("../images/formbackground1.jpg");
@@ -133,7 +141,7 @@ nav {
     background-attachment:local;
     background-position: center;
     border:none;
-    transition: width 2s , height 2s, transform 2s, border-radius 2s;
+    transition: width 2s , height 2s, border-radius 2s, font-size 2s;
     animation-name:transitionanim;
     animation-duration: 2s;   
     animation-timing-function: ease-in;
@@ -145,17 +153,18 @@ nav {
   }
 
   .transition1:hover{
-    border-radius: 10%;
+    border-radius: 50%;
     width: 700px;
     height: 400px;
-    transform:rotate(5deg);
+    font-size:16px;
   }
 
   .transition2{
     display: inline-block;
     position: relative;
     width: 700px;
-    height: 300px;
+    height: 200px;
+    font-size:0px;
     overflow: hidden;
     background-color: transparent;
     background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)) ,url("../images/aboutbackground.png");
@@ -165,51 +174,25 @@ nav {
     background-attachment:local;
     background-position: center;
     border:none;
-    transition: width 2s , height 2s, transform 2s, border-radius 2s;
+    transition: width 2s , height 2s,border-radius 2s, font-size 2s;
     animation-name:transitionanim;
     animation-duration: 2s;   
     animation-timing-function: ease-in;
   }
 
   .transition2:hover{
-    border-radius: 10%;
+    border-radius: 50%;
     width: 700px;
     height: 400px;
-    transform:rotate(-5deg);
+    font-size:16px;
   }
   
   .transition3{
     display: inline-block;
     position: relative;
     width: 700px;
-    height: 300px;
-    overflow: hidden;
-    background-color: transparent;
-    background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)) ,url("../images/onlinesupport.jpg");
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-clip: border-box;
-    background-attachment:local;
-    background-position: center;
-    border:none;
-    transition: width 2s , height 2s, transform 2s, border-radius 2s;
-    animation-name:transitionanim;
-    animation-duration: 2s;   
-    animation-timing-function: ease-in;
-  }
-
-  .transition3:hover{
-    border-radius: 10%;
-    width: 700px;
-    height: 400px;
-    transform:rotate(5deg);
-  }
-
-  .transition4{
-    display: inline-block;
-    position: relative;
-    width: 700px;
-    height: 300px;
+    height: 200px;
+    font-size:0px;
     overflow: hidden;
     background-color: transparent;
     background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)) ,url("../images/formbackground.jpg");
@@ -219,17 +202,45 @@ nav {
     background-attachment:local;
     background-position: center;
     border:none;
-    transition: width 2s , height 2s, transform 2s, border-radius 2s;
+    transition: width 2s , height 2s, border-radius 2s, font-size 2s;
+    animation-name:transitionanim;
+    animation-duration: 2s;   
+    animation-timing-function: ease-in;
+  }
+
+  .transition3:hover{
+    border-radius: 50%;
+    width: 700px;
+    height: 400px;
+    font-size:16px;
+  }
+
+  .transition4{
+    display: inline-block;
+    position: relative;
+    width: 700px;
+    height: 200px;
+    font-size:0px;
+    overflow: hidden;
+    background-color: transparent;
+    background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)) ,url("../images/aboutbackground.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-clip: border-box;
+    background-attachment:local;
+    background-position: center;
+    border:none;
+    transition: width 2s , height 2s, border-radius 2s, font-size 2s;
     animation-name:transitionanim;
     animation-duration: 2s;   
     animation-timing-function: ease-in;
   }
 
   .transition4:hover{
-    border-radius: 10%;
+    border-radius: 50%;
     width: 700px;
     height: 400px;
-    transform:rotate(-5deg);
+    font-size:16px;
   }
 
 
@@ -263,8 +274,16 @@ a:link {
     background-color: #5C5D67;
     padding: 1%;
     text-align: center;
-    
   }
+  
+  /*stylize the contact info in footer*/
+  .footerleft{
+    grid-area: left;
+    background-color: #5C5D67;
+    padding: 1%;
+    text-align: center;
+  }
+
   
 /* Responsive Layout */
 @media only screen and (min-width: 1025px) and (max-width: 1920px) { 
@@ -356,15 +375,6 @@ a:link {
       .logo1{width: 15%; height: auto;}
       
 } 
-
-/*stylize the contact info in footer*/
-  .footerleft{
-    grid-area: left;
-    background-color: #5C5D67;
-    padding: 1%;
-    text-align: center;
-  }
-
 
 /*stylize the form*/
  form {
