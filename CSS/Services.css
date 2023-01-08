@@ -140,33 +140,33 @@ article {
   }
 /* Style the cleaning services */
 .service1 {
-    width:900px;
-    height:512px;
+    width:100%;
+    height:350px;
     border-radius:10px;
     overflow:hidden;
 }
 .services1 {
     width:300%;
-    height:512px;
+    height:350px;
     display:flex;
 }
 .services1 input {
     display:none;
 }
 .slide {
-    width:35%;
+    width:33%;
     transition: 2s;
 }
 .slide img {
-    width:900px;
-    height:512px;
+    width:80%;
+    height:100%;
 }
 .manualnav {
-    position:absolute;
-    width:900px;
+    position: absolute;
+    width: 100%;
     margin-top: -40px;
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
 }
 .manualbtn {
     border: 3px solid grey;
@@ -179,6 +179,9 @@ article {
 .manualbtn:hover {
     background: darkgrey;
     transition: 1s;
+}
+.manualbtn:not(:last-child){
+    margin-right:40px;
 }
 .manualbtn:checked {
     background: grey;
@@ -212,9 +215,6 @@ footer {
     
           header{width: 100%;}
           nav{width:100%;}
-          .left{width: 100%;}
-          form{width:100%;}
-          span{font-size:auto;}
           footer{width: 100%;}
           .logo1{width: 20%; height: auto;}
           
@@ -233,9 +233,6 @@ footer {
     
           header{width: 100%;}
           nav{width:100%;}
-          .left{width: 75%;}
-          form{width:75%;}
-          span{font-size:auto;}
           footer{width: 75%;}
           .logo1{width: 15%; height: auto;}
           
@@ -254,9 +251,6 @@ footer {
         
               header{width: 100%;}
               nav{width:100%;}
-              .left{width: 60%;}
-              form{width:100%;}
-              span{font-size:auto;}
               footer{width: 100%;}
               .logo1{width: 15%; height: auto;}
               
@@ -273,59 +267,9 @@ footer {
                     'footer footer';
             }
         
-              header{width: 100%;}
-              nav{width:100%;}
-              .left{width: 50%;}
-              form{width:100%;}
-              span{font-size:auto;}
-              footer{width: 100%;}
-              .logo1{width: 15%; height: auto;}
+              header{width: 75%;}
+              nav{width:200%;}
+              footer{width: 50%;}
+              .logo1{width: 50%; height:auto;}
               
         } 
-
- 
-/*stylize the form*/
- form {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position:static;
-    color:brown;
-    display: block;
-    background-color: #5C5D67;
-    border: none;
-    padding: 1%;
-    margin: 0%;
-    font-size: 16px;
-    text-align: center;
-    align-content: center;
-    max-width: 700px;
-}
-
-/*stylize the form buttons*/
-input,
-button {
-	color: brown;
-	border: 2px solid #A9A9A9;
-	padding: 2%;
-	font-size: 100%;
-	background: #f2f2f2;
-	border-radius: 1%;
-	width: 100%;
-}
-
-/*stylize the form textarea*/
-textarea {
-	color: brown;
-	border: 2px solid #A9A9A9;
-	padding: 2%;
-	font-size: 100%;
-	background: #f2f2f2;
-	border-radius: 1%;
-	width: 100%;
-}
-
-/*stylize the extra text*/
-span{
-    font-size: 16px;
-    color:brown;
-    text-align: center;
-}
