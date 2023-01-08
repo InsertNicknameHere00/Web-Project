@@ -1,0 +1,331 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /*background: linear-gradient(to bottom , #A9A9A9, 50%, #5C5D67);*/
+    background : #A9A9A9;
+}
+
+/* Style the header */
+header {
+    grid-area: header;
+    background-image: url("../images/Linus\ logo.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-attachment:fixed;
+    background-position: center;
+    padding: 10%;
+    text-align: center;
+    font-size: 16px;    
+}
+
+.logo1 {
+    position: relative;
+    animation: logoshake 2s linear infinite alternate;
+}
+
+@keyframes logoshake{
+    from{
+        transform: rotate(-5deg);
+    }
+    to {
+        transform: rotate(5deg);
+      }
+    }
+
+.footerlogo{
+    position:absolute;
+     height: 3%;
+     width: auto;
+ }
+
+/*stylize the figures to the left*/
+.Figure{    
+float:left;
+display:block;
+width: auto;
+overflow: hidden;
+border-radius:5%;
+background-color: #5C5D67;
+margin:2% 8%;
+}
+    .Figure img{
+        width: 400px;
+        height: 300px;
+    }
+
+
+/* Style the navigation bar*/
+nav {
+    display: inline-block;
+    position:relative;
+    padding: 1%;
+    overflow: hidden;
+    background-color: #A9A9A9;
+    text-align:right;
+    grid-area: nav;
+    z-index:1;
+}
+
+    nav a {
+        float:inline-block;
+        color: #5C5D67;
+        padding: 3%;
+        margin:0%;
+        text-decoration: none;
+        font-size: 18px;
+        z-index:1;
+    }
+
+        nav a:hover {
+            background-color: #5C5D67;
+            color: #f2f2f2;
+            box-shadow: #5C5D67 5px 0px 5px;
+            text-decoration:overline;
+            transition:background-color 0.5s;
+            z-index:1;
+        }
+
+        nav a.active {
+            background-color: transparent;
+            text-decoration:overline;
+            color: black;
+            box-shadow: none;
+            z-index:1;
+        }
+
+        .navleft {
+            display:inline-flex;
+            position:fixed;
+            top:0%;
+            width:100%;
+            overflow: hidden;
+            background-color: #A9A9A9;
+            grid-area: navleft;
+            z-index:1;
+        }
+        
+/* Style The grid container */
+body {
+    background-color: #A9A9A9;
+    display: grid;
+    grid-column-gap: 0%;
+    grid-template-areas:
+        'navleft navleft navleft nav nav nav'
+        'header header header header header header'
+        'article article article article article article'
+        'footer footer footer footer footer footer';
+}
+
+/* Style the article */
+article {
+    grid-area: article;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;    
+    border: none;
+    animation-name:transitionanim;
+    animation-duration: 2s;   
+    animation-timing-function: ease-in;
+  }
+  @keyframes transitionanim {
+    from{opacity:0;}
+    to{opacity: 1;}
+  }
+/* Style the cleaning services */
+.service1 {
+    width:900px;
+    height:512px;
+    border-radius:10px;
+    overflow:hidden;
+}
+.services1 {
+    width:300%;
+    height:512px;
+    display:flex;
+}
+.services1 input {
+    display:none;
+}
+.slide {
+    width:35%;
+    transition: 2s;
+}
+.slide img {
+    width:900px;
+    height:512px;
+}
+.manualnav {
+    position:absolute;
+    width:900px;
+    margin-top: -40px;
+    display:flex;
+    justify-content:center;
+}
+.manualbtn {
+    border: 3px solid grey;
+    padding: 5px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:2s;
+    margin:0px 5px;
+}
+.manualbtn:hover {
+    background: darkgrey;
+    transition: 1s;
+}
+.manualbtn:checked {
+    background: grey;
+}
+#radio11:checked ~ .first{
+    margin-left:0%;
+}
+#radio12:checked ~ .first {
+    margin-left: -35%;
+}
+/* Style the footer */
+footer {
+    grid-area: footer;
+    background-color: #5C5D67;
+    padding: 1%;
+    text-align: center;
+}
+
+     /* Responsive layout */
+     /* Imagine you are drawing on canvas, the more you stretch, the easier it fits*/
+     @media only screen and (min-width: 1025px) and (max-width: 1920px) { 
+        nav { display: inline-block; vertical-align: middle;}
+
+        body {
+            grid-template-areas:
+                'navleft navleft navleft nav nav nav'
+                'header header header header header header'
+                'article article article article article article'
+                'footer footer footer footer footer footer';
+        }
+    
+          header{width: 100%;}
+          nav{width:100%;}
+          .left{width: 100%;}
+          form{width:100%;}
+          span{font-size:auto;}
+          footer{width: 100%;}
+          .logo1{width: 20%; height: auto;}
+          
+    } 
+    
+@media only screen and (min-width: 768px) and (max-width: 1024px) { 
+    nav { display: inline-block; vertical-align: middle; }
+
+    body {
+        grid-template-areas:
+            'navleft navleft navleft nav nav nav'
+            'header header header header header header'
+            'article article article article article article'
+            'footer footer footer footer footer footer';
+    }
+    
+          header{width: 100%;}
+          nav{width:100%;}
+          .left{width: 75%;}
+          form{width:75%;}
+          span{font-size:auto;}
+          footer{width: 75%;}
+          .logo1{width: 15%; height: auto;}
+          
+    } 
+
+    @media only screen and (min-width: 481px) and (max-width: 767px) { 
+        nav { display: inline-block; vertical-align: middle; }
+
+        body {
+            grid-template-areas:
+                'navleft navleft nav nav'
+                'header header header header'
+                'article article article article'
+                'footer footer footer footer';
+        }
+        
+              header{width: 100%;}
+              nav{width:100%;}
+              .left{width: 60%;}
+              form{width:100%;}
+              span{font-size:auto;}
+              footer{width: 100%;}
+              .logo1{width: 15%; height: auto;}
+              
+        } 
+  
+        @media only screen and (min-width: 200px) and (max-width: 480px) { 
+            nav { display: inline-block; vertical-align: middle; }
+
+            body {
+                grid-template-areas:
+                    'navleft nav'
+                    'header header'
+                    'article article'
+                    'footer footer';
+            }
+        
+              header{width: 100%;}
+              nav{width:100%;}
+              .left{width: 50%;}
+              form{width:100%;}
+              span{font-size:auto;}
+              footer{width: 100%;}
+              .logo1{width: 15%; height: auto;}
+              
+        } 
+
+ 
+/*stylize the form*/
+ form {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position:static;
+    color:brown;
+    display: block;
+    background-color: #5C5D67;
+    border: none;
+    padding: 1%;
+    margin: 0%;
+    font-size: 16px;
+    text-align: center;
+    align-content: center;
+    max-width: 700px;
+}
+
+/*stylize the form buttons*/
+input,
+button {
+	color: brown;
+	border: 2px solid #A9A9A9;
+	padding: 2%;
+	font-size: 100%;
+	background: #f2f2f2;
+	border-radius: 1%;
+	width: 100%;
+}
+
+/*stylize the form textarea*/
+textarea {
+	color: brown;
+	border: 2px solid #A9A9A9;
+	padding: 2%;
+	font-size: 100%;
+	background: #f2f2f2;
+	border-radius: 1%;
+	width: 100%;
+}
+
+/*stylize the extra text*/
+span{
+    font-size: 16px;
+    color:brown;
+    text-align: center;
+}
