@@ -6,8 +6,9 @@ html {
     box-sizing: border-box;
 }
 
-body{
-    background: linear-gradient(to bottom , #A9A9A9, 50%, #5C5D67);
+body {
+    /*background: linear-gradient(to bottom , #A9A9A9, 50%, #5C5D67);*/
+    background : #A9A9A9;
 }
 
 /* Style the header */
@@ -45,26 +46,20 @@ header {
  }
 
 /*stylize the figures to the left*/
-.Figureleft{    
+.Figure{    
 float:left;
+display:block;
 width: auto;
-height: auto;
 overflow: hidden;
 border-radius:5%;
 background-color: #5C5D67;
+margin:2% 8%;
 }
+    .Figure img{
+        width: 400px;
+        height: 300px;
+    }
 
-/*stylize the figures to the right*/
-.Figureright{
-    float:right;
-    width: auto;
-height: auto;
-overflow: hidden;
-    border-radius:5%;
-    background-color: #5C5D67;
-}
-
-p { display: inline-block; }
 
 /* Style the navigation bar*/
 nav {
@@ -124,14 +119,13 @@ body {
     grid-template-areas:
         'navleft navleft navleft nav nav nav'
         'header header header header header header'
-        'left left left middle middle middle'
+        'article article article article article article'
         'footer footer footer footer footer footer';
 }
 
 /* Style the article */
 article {
-    grid-area: left;
-    padding: 0%;
+    grid-area: article;
     background-color: transparent;
     text-align: center;
     font-size: 16px;    
@@ -140,25 +134,61 @@ article {
     animation-duration: 2s;   
     animation-timing-function: ease-in;
   }
-
   @keyframes transitionanim {
     from{opacity:0;}
     to{opacity: 1;}
   }
-
-  /*stylize the right-hand side pictures*/
-  aside {
-    grid-area: middle;
-    padding: 0%;
-    background-color: transparent;
-    text-align: center;
-    font-size: 16px;    
-    border: none;
-    animation-name:transitionanim;
-    animation-duration: 2s;   
-    animation-timing-function: ease-in;
-  }
-
+/* Style the cleaning services */
+.service1 {
+    width:900px;
+    height:512px;
+    border-radius:10px;
+    overflow:hidden;
+}
+.services1 {
+    width:300%;
+    height:512px;
+    display:flex;
+}
+.services1 input {
+    display:none;
+}
+.slide {
+    width:35%;
+    transition: 2s;
+}
+.slide img {
+    width:900px;
+    height:512px;
+}
+.manualnav {
+    position:absolute;
+    width:900px;
+    margin-top: -40px;
+    display:flex;
+    justify-content:center;
+}
+.manualbtn {
+    border: 3px solid grey;
+    padding: 5px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:2s;
+    margin:0px 5px;
+}
+.manualbtn:hover {
+    background: darkgrey;
+    transition: 1s;
+}
+.manualbtn:checked {
+    background: grey;
+}
+#radio11:checked ~ .first{
+    margin-left:0%;
+}
+#radio12:checked ~ .first {
+    margin-left: -35%;
+}
 /* Style the footer */
 footer {
     grid-area: footer;
@@ -170,19 +200,18 @@ footer {
      /* Responsive layout */
      /* Imagine you are drawing on canvas, the more you stretch, the easier it fits*/
      @media only screen and (min-width: 1025px) and (max-width: 1920px) { 
-        nav { display: inline-block-block; vertical-align: middle;} 
+        nav { display: inline-block; vertical-align: middle;}
 
-        body  {
-            grid-template-areas: 
-              'header header navleft nav header header' 
-              'left left left left left left'
-              'middle middle middle middle middle middle' 
-              'footer footer footer footer footer footer';
-          }
+        body {
+            grid-template-areas:
+                'navleft navleft navleft nav nav nav'
+                'header header header header header header'
+                'article article article article article article'
+                'footer footer footer footer footer footer';
+        }
     
           header{width: 100%;}
           nav{width:100%;}
-          .middle{width: 100%;}
           .left{width: 100%;}
           form{width:100%;}
           span{font-size:auto;}
@@ -192,20 +221,18 @@ footer {
     } 
     
 @media only screen and (min-width: 768px) and (max-width: 1024px) { 
-    nav { display: inline-block; vertical-align: middle; } 
-    
-        body  {
-            grid-template-areas: 
-              'navleft navleft navleft nav nav nav' 
-              'header header header header header header' 
-              'left left left left left left'
-              'middle middle middle middle middle middle' 
-              'footer footer footer footer footer footer';
-          }
+    nav { display: inline-block; vertical-align: middle; }
+
+    body {
+        grid-template-areas:
+            'navleft navleft navleft nav nav nav'
+            'header header header header header header'
+            'article article article article article article'
+            'footer footer footer footer footer footer';
+    }
     
           header{width: 100%;}
           nav{width:100%;}
-          .middle{width: 75%;}
           .left{width: 75%;}
           form{width:75%;}
           span{font-size:auto;}
@@ -215,20 +242,18 @@ footer {
     } 
 
     @media only screen and (min-width: 481px) and (max-width: 767px) { 
-        nav { display: inline-block; vertical-align: middle; } 
-        
-            body  {
-                grid-template-areas: 
-                  'navleft navleft nav nav nav' 
-                  'header header header header' 
-                  'left left left left'
-                  'middle middle middle middle' 
-                  'footer footer footer footer';
-              }
+        nav { display: inline-block; vertical-align: middle; }
+
+        body {
+            grid-template-areas:
+                'navleft navleft nav nav'
+                'header header header header'
+                'article article article article'
+                'footer footer footer footer';
+        }
         
               header{width: 100%;}
               nav{width:100%;}
-              .middle{width: 60%;}
               .left{width: 60%;}
               form{width:100%;}
               span{font-size:auto;}
@@ -238,20 +263,18 @@ footer {
         } 
   
         @media only screen and (min-width: 200px) and (max-width: 480px) { 
-            nav { display: inline-block; vertical-align: middle; } 
+            nav { display: inline-block; vertical-align: middle; }
 
-            body  {
+            body {
                 grid-template-areas:
-                  'navleft nav' 
-                  'header header' 
-                  'left left'
-                  'middle middle' 
-                  'footer footer';
-              }
+                    'navleft nav'
+                    'header header'
+                    'article article'
+                    'footer footer';
+            }
         
               header{width: 100%;}
               nav{width:100%;}
-              .middle{width: 50%;}
               .left{width: 50%;}
               form{width:100%;}
               span{font-size:auto;}
