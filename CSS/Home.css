@@ -20,7 +20,6 @@ header {
     background-attachment:fixed;
     background-position: center;
     padding: 10%;
-    text-align: center;
 }
 
 .logo1 {
@@ -70,17 +69,18 @@ nav {
 
       nav a:hover {
           background-color: #5C5D67;
-          color: #f2f2f2;
+          color: white;
           box-shadow: #5C5D67 5px 0px 5px;
           text-decoration:overline;
           transition:background-color 0.5s;
           z-index:1;
+          cursor:pointer;
       }
 
       nav a.active {
-          background-color: transparent;
           text-decoration:overline;
-          color: black;
+          color: white;
+          background-color: #5C5D67;
           box-shadow: none;
           z-index:1;
       }
@@ -95,6 +95,44 @@ nav {
           grid-area: navleft;
           z-index:1;
       }
+
+      /* Style The Sidebar */
+      .sidebar {
+        display: block;
+        position:relative;
+        padding: 0%;
+        margin:0%;
+        overflow: hidden;
+        background-color: #5C5D67;
+        color:#A9A9A9;
+        text-align:center;
+        grid-area: nav;
+        z-index:1;
+      }
+
+      ul {
+        list-style-type: none;
+        font-size: 35px;    /* This controls the space between the text */
+      }
+      
+      .sidebar a {
+        float:block;
+        color: #A9A9A9;
+        padding: 0%;
+        margin:0%;
+        text-decoration: none;
+        z-index:1;
+    }
+
+    .sidebar a.active {
+      background-color: transparent;
+      text-decoration:overline;
+      color: white;
+      box-shadow: none;
+      z-index:1;
+      font-size: 25px;
+  }
+
 
   /* Style The grid container */
   body {
@@ -141,9 +179,9 @@ p { display: inline-block; }
     background-attachment:local;
     background-position: center;
     border:none;
-    transition: width 2s , height 2s, border-radius 2s, font-size 2s;
+    transition: width 1s , height 1s, border-radius 1s, font-size 1s;
     animation-name:transitionanim;
-    animation-duration: 2s;   
+    animation-duration: 1s;     
     animation-timing-function: ease-in;
   }
 
@@ -174,9 +212,9 @@ p { display: inline-block; }
     background-attachment:local;
     background-position: center;
     border:none;
-    transition: width 2s , height 2s,border-radius 2s, font-size 2s;
+    transition: width 1s , height 1s, border-radius 1s, font-size 1s;
     animation-name:transitionanim;
-    animation-duration: 2s;   
+    animation-duration: 1s;    
     animation-timing-function: ease-in;
   }
 
@@ -202,17 +240,17 @@ p { display: inline-block; }
     background-attachment:local;
     background-position: center;
     border:none;
-    transition: width 2s , height 2s, border-radius 2s, font-size 2s;
+    transition: width 1s , height 1s, border-radius 1s, font-size 1s;
     animation-name:transitionanim;
-    animation-duration: 2s;   
+    animation-duration: 1s;   
     animation-timing-function: ease-in;
   }
 
   .transition3:hover{
-    border-radius: 50%;
     width: 700px;
     height: 400px;
     font-size:16px;
+    border-radius: 50%;
   }
 
   .transition4{
@@ -230,9 +268,9 @@ p { display: inline-block; }
     background-attachment:local;
     background-position: center;
     border:none;
-    transition: width 2s , height 2s, border-radius 2s, font-size 2s;
+    transition: width 1s , height 1s, border-radius 1s, font-size 1s;
     animation-name:transitionanim;
-    animation-duration: 2s;   
+    animation-duration: 1s;   
     animation-timing-function: ease-in;
   }
 
@@ -284,10 +322,72 @@ a:link {
     text-align: center;
   }
 
+  /*stylize the form*/
+ form {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position:relative;
+  color: black;
+  display: block;
+  background-color: transparent;
+  border: none;
+  padding: 1%;
+  margin: 0%;
+  font-size: 18px;
+  text-align: center;
+  align-content: center;
+  max-width: 700px;
+}
+
+/*stylize the form buttons*/
+input,
+button {
+color: black;
+border: 2px solid #A9A9A9;
+padding: 2%;
+font-size: 100%;
+background: white;
+border-radius: 1%;
+width: 100%;
+}
+
+/*stylize the form textarea*/
+textarea {
+color: black;
+border: 2px solid #A9A9A9;
+padding: 2%;
+font-size: 100%;
+background: white;
+border-radius: 1%;
+width: 100%;
+}
+
+/*stylize the extra text*/
+span{
+  font-size: 25px;
+  font-weight:700;
+  color:white;
+  text-decoration: none;
+}
+
+/*stylize the logo quote on the header*/
+.logoquote{
+  font-size: 30px;
+  color:white;
+  float:none;
+}
+
+.map{
+  border:none;
+  grid-area: footer;
+  width: 600px;
+  height: 400px;
+  max-width: 600px;
+}
   
 /* Responsive Layout */
 @media only screen and (min-width: 1025px) and (max-width: 1920px) { 
-    nav { display: inline-block; vertical-align: middle;} 
+    nav { display: inline-block;} 
+    .sidebar{display:none;}
 
     body  {
         grid-template-areas: 
@@ -309,11 +409,13 @@ a:link {
 } 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) { 
-    nav { display: inline-block; vertical-align: middle; } 
+    nav { display: none;} 
+    .sidebar{display:block;}
+    .navleft{ display: none;} 
 
     body  {
         grid-template-areas: 
-           'navleft navleft navleft nav nav nav' 
+           'nav nav nav nav nav nav' 
           'header header header header header header'
           'middle middle middle middle middle middle' 
           'left left left footer footer footer';
@@ -331,11 +433,13 @@ a:link {
 } 
 
 @media only screen and (min-width: 481px) and (max-width: 767px) { 
-    nav { display: inline-block; vertical-align: middle; } 
+  nav { display: none;} 
+  .sidebar{display:block;}
+  .navleft{ display: none;} 
 
     body  {
         grid-template-areas:
-        'navleft navleft nav nav'  
+        'nav nav nav nav'  
         'header header header header' 
         'middle middle middle middle' 
         'left left left left'
@@ -354,11 +458,13 @@ a:link {
 } 
 
 @media only screen and (min-width: 200px) and (max-width: 480px) { 
-    nav { display: inline-block; vertical-align:middle; } 
+    nav { display: none;} 
+    .sidebar{display:block;}
+    .navleft{ display: none;} 
 
     body  {
         grid-template-areas: 
-           'navleft nav' 
+           'nav nav' 
           'header header'
           'middle middle' 
           'left left'
@@ -375,57 +481,3 @@ a:link {
       .logo1{width: 15%; height: auto;}
       
 } 
-
-/*stylize the form*/
- form {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position:relative;
-    color: black;
-    display: block;
-    background-color: transparent;
-    border: none;
-    padding: 1%;
-    margin: 0%;
-    font-size: 18px;
-    text-align: center;
-    align-content: center;
-    max-width: 700px;
-}
-
-/*stylize the form buttons*/
-input,
-button {
-	color: black;
-	border: 2px solid #A9A9A9;
-	padding: 2%;
-	font-size: 100%;
-	background: #f2f2f2;
-	border-radius: 1%;
-	width: 100%;
-}
-
-/*stylize the form textarea*/
-textarea {
-	color: black;
-	border: 2px solid #A9A9A9;
-	padding: 2%;
-	font-size: 100%;
-	background: #f2f2f2;
-	border-radius: 1%;
-	width: 100%;
-}
-
-/*stylize the extra text*/
-span{
-    font-size: 25px;
-    color:white;
-    text-align: center;
-}
-
-.map{
-    border:none;
-    grid-area: footer;
-    width: 600px;
-    height: 400px;
-    max-width: 600px;
-}

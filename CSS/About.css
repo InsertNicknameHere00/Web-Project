@@ -20,7 +20,6 @@ header {
     background-attachment:fixed;
     background-position: center;
     padding: 10%;
-    text-align: center;
 }
 
 .logo1 {
@@ -36,17 +35,10 @@ header {
     height: 350px;
     margin:0% 20%;
     overflow: hidden;
-    background-color: transparent;
-    background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)) ,url("../images/aboutusbg.jpg");
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-clip: border-box;
-    background-attachment:local;
-    background-position: center;
     border:none;
-    transition: transform 2s;
+    transition: transform 1s;
     animation-name:transitionanim;
-    animation-duration: 2s;   
+    animation-duration: 1s;   
     animation-timing-function: ease-in;
   }
 
@@ -91,7 +83,7 @@ nav {
 
         nav a:hover {
             background-color: #5C5D67;
-            color: #f2f2f2;
+            color: white;
             box-shadow: #5C5D67 5px 0px 5px;
             text-decoration:overline;
             transition:background-color 0.5s;
@@ -99,9 +91,9 @@ nav {
         }
 
         nav a.active {
-            background-color: transparent;
             text-decoration:overline;
-            color: black;
+            color: white;
+            background-color: #5C5D67;
             box-shadow: none;
             z-index:1;
         }
@@ -117,6 +109,42 @@ nav {
             z-index:1;
         }
 
+              /* Style The Sidebar */
+      .sidebar {
+        display: block;
+        position:relative;
+        padding: 0%;
+        margin:0%;
+        overflow: hidden;
+        background-color: #5C5D67;
+        color:#A9A9A9;
+        text-align:center;
+        grid-area: nav;
+        z-index:1;
+      }
+
+      ul {
+        list-style-type: none;
+        font-size: 35px;    /* This controls the space between the text */
+      }
+      
+      .sidebar a {
+        float:block;
+        color: #A9A9A9;
+        padding: 0%;
+        margin:0%;
+        text-decoration: none;
+        z-index:1;
+    }
+
+    .sidebar a.active {
+      background-color: transparent;
+      text-decoration:overline;
+      color: white;
+      box-shadow: none;
+      z-index:1;
+      font-size: 25px;
+  }
 
   /* Style The grid container */
   body {
@@ -142,7 +170,7 @@ nav {
     background-position: center;
     border:none;
     animation-name:transitionanim;
-    animation-duration: 2s;   
+    animation-duration: 1s;   
     animation-timing-function: ease-in;
   }
 
@@ -158,10 +186,32 @@ footer {
     padding: 1%;
     text-align: center;
 }
+
+.info{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+span{
+    font-size: 25px;
+    font-weight:700;
+    color:#AFD2E9;
+    text-decoration: none;
+}
+
+/*stylize the logo quote on the header*/
+.logoquote{
+    font-size: 30px;
+    color:white;
+    float:none;
+  }
   
 /* Responsive Layout */
 @media only screen and (min-width: 1025px) and (max-width: 1920px) { 
-    nav { display: inline-block-block; vertical-align: middle;} 
+    nav { display: inline-block;} 
+    .sidebar{display:none;}
 
     body  {
         grid-template-areas: 
@@ -182,11 +232,13 @@ footer {
 } 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) { 
-    nav { display: inline-block; vertical-align: middle; } 
+    nav { display: none; } 
+    .sidebar{display:block;}
+    .navleft{ display: none;} 
 
     body  {
         grid-template-areas: 
-          'navleft navleft navleft nav nav nav' 
+          'nav nav nav nav nav nav' 
           'header header header header header header' 
           'middle middle middle middle middle middle' 
           'footer footer footer footer footer footer';
@@ -199,15 +251,18 @@ footer {
       footer{width: 100%;}
       span{font-size:auto;}
       .logo1{width: 15%; height: auto;}
+      .bgpic{width: 70%; height: auto; margin:0% 20%;}
       
 } 
 
 @media only screen and (min-width: 481px) and (max-width: 767px) { 
-    nav { display: inline-block; vertical-align: middle; } 
+    nav { display: none; } 
+    .sidebar{display:block;}
+    .navleft{ display: none;} 
 
     body  {
         grid-template-areas: 
-        'navleft navleft nav nav' 
+        'nav nav nav nav' 
         'header header header header' 
         'middle middle middle middle' 
         'footer footer footer footer'
@@ -220,15 +275,18 @@ footer {
       footer{width: 100%;}
       span{font-size:auto;}
       .logo1{width: 15%; height: auto;}
+      .bgpic{width: 70%; height: auto; margin:0% 20%;}
       
 } 
 
 @media only screen and (min-width: 200px) and (max-width: 480px) { 
-    nav { display: inline-block; vertical-align: middle; } 
+    nav { display:none;} 
+    .sidebar{display:block;}
+    .navleft{ display: none;} 
 
     body  {
         grid-template-areas: 
-          'navleft nav' 
+          'nav nav' 
           'header header' 
           'middle middle' 
           'footer footer';
@@ -241,19 +299,6 @@ footer {
       footer{width: 100%;}
       span{font-size:auto;}
       .logo1{width: 15%; height: auto;}
+      .bgpic{width: 70%; height: auto; margin:0% 20%;}
       
 } 
-
-.info{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    text-decoration: none;
-    color: black;
-}
-
-span{
-    font-size: 25px;
-    font-weight:700;
-    color:#AFD2E9;
-    text-decoration: none;
-}

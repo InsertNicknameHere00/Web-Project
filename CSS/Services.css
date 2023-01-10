@@ -21,8 +21,6 @@ header {
     background-attachment:fixed;
     background-position: center;
     padding: 10%;
-    text-align: center;
-    font-size: 16px;    
 }
 
 .logo1 {
@@ -85,7 +83,7 @@ nav {
 
         nav a:hover {
             background-color: #5C5D67;
-            color: #f2f2f2;
+            color: white;
             box-shadow: #5C5D67 5px 0px 5px;
             text-decoration:overline;
             transition:background-color 0.5s;
@@ -93,9 +91,9 @@ nav {
         }
 
         nav a.active {
-            background-color: transparent;
             text-decoration:overline;
-            color: black;
+            color: white;
+            background-color: #5C5D67;
             box-shadow: none;
             z-index:1;
         }
@@ -110,6 +108,43 @@ nav {
             grid-area: navleft;
             z-index:1;
         }
+
+         /* Style The Sidebar */
+      .sidebar {
+        display: block;
+        position:relative;
+        padding: 0%;
+        margin:0%;
+        overflow: hidden;
+        background-color: #5C5D67;
+        color:#A9A9A9;
+        text-align:center;
+        grid-area: nav;
+        z-index:1;
+      }
+
+      ul {
+        list-style-type: none;
+        font-size: 35px;    /* This controls the space between the text */
+      }
+      
+      .sidebar a {
+        float:block;
+        color: #A9A9A9;
+        padding: 0%;
+        margin:0%;
+        text-decoration: none;
+        z-index:1;
+    }
+
+    .sidebar a.active {
+      background-color: transparent;
+      text-decoration:overline;
+      color: white;
+      box-shadow: none;
+      z-index:1;
+      font-size: 25px;
+  }
         
 /* Style The grid container */
 body {
@@ -131,7 +166,7 @@ article {
     font-size: 16px;    
     border: none;
     animation-name:transitionanim;
-    animation-duration: 2s;   
+    animation-duration: 1s;   
     animation-timing-function: ease-in;
   }
   @keyframes transitionanim {
@@ -200,10 +235,19 @@ footer {
     text-align: center;
 }
 
+/*stylize the logo quote on the header*/
+.logoquote{
+    font-size: 30px;
+    font-weight: 700;
+    color:white;
+    float:none;
+  }
+
      /* Responsive layout */
      /* Imagine you are drawing on canvas, the more you stretch, the easier it fits*/
      @media only screen and (min-width: 1025px) and (max-width: 1920px) { 
-        nav { display: inline-block; vertical-align: middle;}
+        nav { display: inline-block;}
+        .sidebar{display:none;}
 
         body {
             grid-template-areas:
@@ -221,11 +265,13 @@ footer {
     } 
     
 @media only screen and (min-width: 768px) and (max-width: 1024px) { 
-    nav { display: inline-block; vertical-align: middle; }
+    nav { display: none;} 
+    .sidebar{display:block;}
+    .navleft{ display: none;} 
 
     body {
         grid-template-areas:
-            'navleft navleft navleft nav nav nav'
+            'nav nav nav nav nav nav'
             'header header header header header header'
             'article article article article article article'
             'footer footer footer footer footer footer';
@@ -239,11 +285,13 @@ footer {
     } 
 
     @media only screen and (min-width: 481px) and (max-width: 767px) { 
-        nav { display: inline-block; vertical-align: middle; }
+        nav { display: none;} 
+    .sidebar{display:block;}
+    .navleft{ display: none;} 
 
         body {
             grid-template-areas:
-                'navleft navleft nav nav'
+                'nav nav nav nav'
                 'header header header header'
                 'article article article article'
                 'footer footer footer footer';
@@ -257,19 +305,22 @@ footer {
         } 
   
         @media only screen and (min-width: 200px) and (max-width: 480px) { 
-            nav { display: inline-block; vertical-align: middle; }
+            nav { display: none;} 
+            .sidebar{display:block;}
+            .navleft{ display: none;} 
 
             body {
                 grid-template-areas:
-                    'navleft nav'
+                    'nav nav'
                     'header header'
                     'article article'
                     'footer footer';
             }
         
-              header{width: 75%;}
-              nav{width:200%;}
-              footer{width: 50%;}
-              .logo1{width: 50%; height:auto;}
+            header{width: 100%;}
+            nav{width:100%;}
+            article{width:100%;}
+            footer{width: 100%;}
+            .logo1{width: 15%; height: auto;}
               
         } 
