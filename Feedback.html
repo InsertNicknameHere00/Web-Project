@@ -5,48 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="CSS/Feedback.css">
-    <title>Feedback</title>
+    <title>Rate us</title>
 </head>
 <body>
-
+    <script src="JS/Feedback.js"></script>
     <div class="navleft">
         <a href="Home.html"><img src="images/Techtips2.png" class="logo1" alt="Logo"></a>
         <nav>
             <a href="Home.html">HOME</a>
-            <a href="Services.html">SERVICES</a>
-            <a href="About.html">ABOUT</a>
-            <a href="Form.html">APPOINTMENT</a>
-            <a class="active" href="Feedback.html">FEEDBACK</a>
+            <a class="active" href="About.html">FEEDBACK</a>
         </nav>
     </div>
-    <nav class="sidebar">
-        <ul>
-        <li><a href="Home.html">HOME</a></li>
-    <li><a href="Services.html">SERVICES</a></li>
-    <li> <a href="About.html">ABOUT</a></li>
-    <li><a href="Form.html">APPOINTMENT</a></li>
-    <li><a class="active" href="Feedback.html">FEEDBACK</a></li>
-    </ul>
-    </nav>
-
-    <header>
-        <blockquote><span class="logoquote">“Technology is best when it brings people together.”</span></blockquote>
-        <span class="logoquote"><p>- Matt Mullenweg, Social Media Entrepreneur</p></span>
-        </header>
-
+    <header></header>
     <article>
+        <h2>Give us your honest marks from 0 to 10 and leave a message!</h2>
+        <form action="Home.html" method="post" name="form">
 
-            <form action="Home.html" method="post" name="form">
-            <input type="text" id="Username" name="Username" placeholder="Name..." required><br><br>
-            <input type="email" id="email" name="email" placeholder="E-mail..." required><br><br>
-            <label for="range">RATING:</label>
-            <input type="range" id="range" name="vol" min="0" max="10" required>
+            <label for="speed">Timing:</label>
+            <img class="limg" src="images/rate_turtle.png" />
+            <img class="rimg" src="images/rate_rabbit.png" /><br />
+            <input class="rate" type="range" id="speed" name="speed" min="0" max="10" value="5" step="1">
+
+            <label for="att">Attitude:</label>
+            <img class="limg" src="images/rate_bad.png" />
+            <img class="rimg" src="images/rate_good.png" /><br />
+            <input class="rate" type="range" id="att" name="att" min="0" max="10" value="5" step="1">
+
+            <label for="work">Work done:</label>
+            <img class="limg" src="images/rate_lada.png" />
+            <img class="rimg" src="images/rate_lambo.png" /><br />
+            <input class="rate" type="range" id="work" name="work" min="0" max="10" value="5" step="1">
             <textarea id="area" name="area" placeholder="Message..." rows="4" cols="40"></textarea><br><br>
-            <input type="submit" value="Submit">
-            </form>
+            <input type="submit" onclick="sub()" value="Send rates" />
+        </form>
 
-        </article>
-        <footer><p>All rights reserved 2022, Tech Tips Group
+    </article>
+    <footer>
+        <p>
+            All rights reserved 2022, Tech Tips Group
             <a href="https://github.com/InsertNicknameHere00/Web-Project" target="_blank"><img src="images/footericon.png" class="footerlogo"></a>
         </p>
     </footer>

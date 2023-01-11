@@ -197,6 +197,7 @@ form {
     font-size: 25px;
     text-align: left;
     align-content: center;
+    justify-content:center;
     max-width: 700px;
 }
 
@@ -205,11 +206,15 @@ input,
 button {
 	color: black;
 	border: 2px solid #A9A9A9;
-	padding: 2%;
 	font-size: 100%;
 	background: white;
 	border-radius: 1%;
-	width: 100%;
+	width: 95%;
+}
+label{
+    float:left;
+    width:50%;
+    color:white;
 }
 
 /*stylize the extra text*/
@@ -232,19 +237,16 @@ span{
         nav { display: inline-block;}
         .sidebar{display:none;}
 
-        body  {
-            grid-template-areas: 
-              'header header navleft nav header header' 
-              'left left left left middle middle' 
-              'footer footer footer footer footer footer';
-          }
+        body {
+            grid-template-areas:
+                'navleft navleft navleft nav nav nav'
+                'header header header header header header'
+                'left left left middle middle middle'
+                'footer footer footer footer footer footer';
+        }
     
           header{width: 100%;}
           nav{width:100%;}
-          .middle{width: 100%;}
-          .left{width: 100%;}
-          form{width:100%;}
-          span{font-size:auto;}
           footer{width: 100%;}
           .logo1{width: 20%; height: auto;}
           
@@ -282,19 +284,15 @@ span{
         
             body  {
                 grid-template-areas: 
-                  'nav nav nav nav' 
-                  'header header header header' 
-                  'left left left left'
-                  'middle middle middle middle' 
-                  'footer footer footer footer';
+                  'nav nav nav' 
+                  'header header header' 
+                  'left left left'
+                  'middle middle middle' 
+                  'footer footer footer';
               }
         
               header{width: 100%;}
               nav{width:100%;}
-              .middle{width: 60%;}
-              .left{width: 60%;}
-              form{width:100%;}
-              span{font-size:auto;}
               footer{width: 100%;}
               .logo1{width: 15%; height: auto;}
               
@@ -316,9 +314,6 @@ span{
         
               header{width: 100%;}
               nav{width:100%;}
-              .middle{width: 50%;}
-              .left{width: 50%;}
-              form{width:100%;}
               span{font-size:auto;}
               footer{width: 100%;}
               .logo1{width: 15%; height: auto;}

@@ -174,18 +174,18 @@ article {
     to{opacity: 1;}
   }
 /* Style the cleaning services */
-.service1 {
+.service {
     width:100%;
     height:350px;
     border-radius:10px;
     overflow:hidden;
 }
-.services1 {
+.services {
     width:300%;
     height:350px;
     display:flex;
 }
-.services1 input {
+.services input {
     display:none;
 }
 .slide {
@@ -196,10 +196,29 @@ article {
     width:80%;
     height:100%;
 }
+.services2 {
+    width: 400%;
+    height: 350px;
+    display: flex;
+}
+
+    .services2 input {
+        display: none;
+    }
+
+.slide2 {
+    width: 25%;
+    transition: 2s;
+}
+
+    .slide2 img {
+        width: 80%;
+        height: 100%;
+    }
 .manualnav {
     position: absolute;
     width: 100%;
-    margin-top: -40px;
+    margin-top: -30px;
     display: flex;
     justify-content: center;
 }
@@ -212,7 +231,7 @@ article {
     margin:0px 5px;
 }
 .manualbtn:hover {
-    background: darkgrey;
+    background: blue;
     transition: 1s;
 }
 .manualbtn:not(:last-child){
@@ -227,6 +246,22 @@ article {
 #radio12:checked ~ .first {
     margin-left: -35%;
 }
+#radio21:checked ~ .first {
+    margin-left: 0%;
+}
+#radio22:checked ~ .first {
+    margin-left: -35%;
+}
+#radio31:checked ~ .first {
+    margin-left: 0%;
+}
+#radio32:checked ~ .first {
+    margin-left: -25%;
+}
+#radio33:checked ~ .first {
+    margin-left: -50%;
+}
+
 /* Style the footer */
 footer {
     grid-area: footer;
