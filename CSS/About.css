@@ -72,7 +72,6 @@ nav {
 }
 
     nav a {
-        float:inline-block;
         color: #5C5D67;
         padding: 3%;
         margin:0%;
@@ -129,7 +128,6 @@ nav {
       }
       
       .sidebar a {
-        float:block;
         color: #A9A9A9;
         padding: 0%;
         margin:0%;
@@ -220,7 +218,6 @@ footer {
       .middle{width: 100%;}
       form{width:100%;}
       footer{width: 100%;}
-      span{font-size:auto;}
       .logo1{width: 20%; height: auto;}
       
 } 
@@ -243,7 +240,6 @@ footer {
       .middle{width: 75%;}
       form{width:100%;}
       footer{width: 100%;}
-      span{font-size:auto;}
       .logo1{width: 15%; height: auto;}
       .bgpic{width: 70%; height: auto; margin:0% 20%;}
       
@@ -267,7 +263,6 @@ footer {
       .middle{width: 60%;}
       form{width:100%;}
       footer{width: 100%;}
-      span{font-size:auto;}
       .logo1{width: 15%; height: auto;}
       .bgpic{width: 70%; height: auto; margin:0% 20%;}
       
@@ -291,7 +286,6 @@ footer {
       .middle{width: 50%;}
       form{width:100%;}
       footer{width: 100%;}
-      span{font-size:auto;}
       .logo1{width: 15%; height: auto;}
       .bgpic{width: 70%; height: auto; margin:0% 20%;}
       

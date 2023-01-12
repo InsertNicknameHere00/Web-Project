@@ -72,7 +72,6 @@ nav {
 }
 
     nav a {
-        float:inline-block;
         color: #5C5D67;
         padding: 3%;
         margin:0%;
@@ -129,7 +128,6 @@ nav {
       }
       
       .sidebar a {
-        float:block;
         color: #A9A9A9;
         padding: 0%;
         margin:0%;

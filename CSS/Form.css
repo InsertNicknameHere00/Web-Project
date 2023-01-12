@@ -57,7 +57,6 @@ nav {
 }
 
     nav a {
-        float:inline-block;
         color: #5C5D67;
         padding: 3%;
         margin:0%;
@@ -114,7 +113,6 @@ nav {
       }
       
       .sidebar a {
-        float:block;
         color: #A9A9A9;
         padding: 0%;
         margin:0%;
@@ -264,7 +262,6 @@ label{
           .middle{width: 100%;}
           .left{width: 100%;}
           form{width:100%;}
-          span{font-size:auto;}
           footer{width: 75%;}
           .logo1{width: 15%; height: auto;}
           
@@ -307,7 +304,6 @@ label{
         
               header{width: 100%;}
               nav{width:100%;}
-              span{font-size:auto;}
               footer{width: 100%;}
               .logo1{width: 15%; height: auto;}
               

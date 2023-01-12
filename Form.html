@@ -31,12 +31,12 @@
     
     <header>
         <blockquote><span class="logoquote">“Technology is best when it brings people together.”</span></blockquote>
-        <span class="logoquote"><p>- Matt Mullenweg, Social Media Entrepreneur</p></span>
+        <p class="logoquote">- Matt Mullenweg, Social Media Entrepreneur</p>
         </header>
 
  <article>
     <fieldset>
-        <legend><h4><Span class="logoquote">Appointment</Span></h4></legend>
+        <legend><span class="logoquote">Appointment</span></legend>
         <form action="Form.html" method="post" name="form" id="form">
             <label id="labelName" title="Must contain more than 2 characters, only letters" for="name">Name:</label>
             <input type="text" id="name" name="Name" value="" placeholder="..." onkeyup="labelName()" required><br>
@@ -47,49 +47,52 @@
             <label id="labelPhone" title="Must use this form: 08[7-9]???????" for="phone">Phone:</label>
             <input type="tel" id="phone" name="Phone" placeholder="..." onkeyup="labelPhone()" required><br>
             <label for="machine">Select Machine:</label>
-            <select id="machine" name="Machine" required>
-                <option value="PC">PC</option>
+            <select id="machine" name="Machine">
+                <option value="PC" selected>PC</option>
                 <option value="LAPTOP">Laptop</option>
                 <option value="Macbook">Macbook</option>
                 <option value="IOS">IOS</option>
                 <option value="Android">Android</option>
             </select><br><br>
             <label for="service">Select Service:</label>
-            <select id="service" name="Service" required>
-                <option value="clean">Cleaning</option>
+            <select id="service" name="Service">
+                <option value="clean" selected>Cleaning</option>
                 <option value="install">Installations</option>
                 <option value="repair">Repairs</option>
                 <option value="consultation">Consultation</option>
             </select><br><br>
             <label title="Don't select today, past dates and dates after 30 days from now!" for="date" id="labelDate">Date:</label>
-            <input type="date" id="date" name="date" min="2023-01-01" max="2023-02-28" onclick="labelDate()" onkeyup="labelDate()" onupdate="labelDate()" required><br>
+            <input type="date" id="date" name="date" min="2023-01-01" max="2023-02-28" onclick="labelDate()" onkeyup="labelDate()" required><br>
             <label title="Work schedule :: Mon-Fri | 08:00-16:00 :: Sat-Sun | not working" id="labelHour" for="hour">Hour:</label>
-            <input type="number" id="hour" name="hour" min="0" max="23" onclick="labelHour()" onkeyup="labelHour()" onupdate="labelHour()" required><br>
+            <input type="number" id="hour" name="hour" min="0" max="23" onclick="labelHour()" onkeyup="labelHour()" required><br>
             <label title="Work schedule :: Mon-Fri | 08:00-16:00 :: Sat-Sun | not working" id="labelMinutes" for="minutes">Minutes:</label>
-            <input type="number" id="minutes" name="minutes" min="0" max="59" onclick="labelHour()" onkeyup="labelHour()" onupdate="labelHour()" required><br><br>
+            <input type="number" id="minutes" name="minutes" min="0" max="59" onclick="labelHour()" onkeyup="labelHour()" required><br><br>
             <button onclick="return submitForm()">Submit</button><br>
-            <input type="reset" value="Clear" float="left">
+            <input type="reset" value="Clear">
         </form>
 </fieldset>
-
+     <h6>.</h6>
 </article>
 
 <aside>
-<fieldset><img src="images/aboutbackground.jpg">
-    <legend><h4><Span class="logoquote">Feedback</Span></h4></legend>
-        <p><h4>Hey everyone,</h4>
+    <fieldset>
+        <img src="images/aboutbackground.jpg" alt="">
+        <legend><span class="logoquote">Feedback</span></legend>
 
-        Did you know that the number of TechTips fans has doubled since last year? We must be doing something right! And whatever that is, we want to keep doing it. So tell us!
-        
-        If you have 90 seconds today, we would love it if you went to <a href="Feedback.html">FEEDBACK</a> and wrote a review. A few sentences is all it takes! This enables us to continue providing the best experience possible for you, and helps others understand how TechTips can make their life easier.
-        
-        <br><br>Thank you in advance!</p>
+        <h4>Hey everyone,</h4>
+        <p>
+            Did you know that the number of TechTips fans has doubled since last year? We must be doing something right! And whatever that is, we want to keep doing it. So tell us!
+
+            If you have 90 seconds today, we would love it if you went to <a href="Feedback.html">FEEDBACK</a> and wrote a review. A few sentences is all it takes! This enables us to continue providing the best experience possible for you, and helps others understand how TechTips can make their life easier.
+
+            <br><br>Thank you in advance!
+        </p>
     </fieldset>
 
     </aside>
 
     <footer><p>All rights reserved 2022, TechTips Group
-        <a href="https://github.com/InsertNicknameHere00/Web-Project" target="_blank"><img src="images/footericon.png" class="footerlogo"></a>
+        <a href="https://github.com/InsertNicknameHere00/Web-Project" target="_blank"><img src="images/footericon.png" alt="" class="footerlogo"></a>
     </p>
 </footer>
 
