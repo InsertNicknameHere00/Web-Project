@@ -5,20 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="CSS/Feedback.css">
-    <title>Rate us</title>
+    <title>Feedback</title>
 </head>
 <body>
     <script src="JS/Feedback.js"></script>
-    <div class="navleft">
-        <a href="Home.html"><img src="images/Techtips2.png" class="logo1" alt="Logo"></a>
-        <nav>
-            <a href="Home.html">HOME</a>
-            <a class="active" href="About.html">FEEDBACK</a>
-        </nav>
-    </div>
-    <header></header>
+<div class="navleft">
+    <a href="Home.html"><img src="images/Techtips2.png" class="logo1" alt="Logo"></a>
+    <nav>
+        <a href="Home.html">HOME</a>
+        <a href="Services.html">SERVICES</a>
+        <a href="About.html">ABOUT</a>
+        <a href="Form.html">APPOINTMENT</a>
+        <a class="active" href="Feedback.html">FEEDBACK</a>
+    </nav>
+</div>
+<nav class="sidebar">
+    <ul>
+    <li><a href="Home.html">HOME</a></li>
+<li><a href="Services.html">SERVICES</a></li>
+<li> <a href="About.html">ABOUT</a></li>
+<li><a href="Form.html">APPOINTMENT</a></li>
+<li><a class="active" href="Feedback.html">FEEDBACK</a></li>
+</ul>
+</nav>
+
+    <header>
+    <blockquote><span class="logoquote">“Technology is best when it brings people together.”</span></blockquote>
+    <span class="logoquote"><p>- Matt Mullenweg, Social Media Entrepreneur</p></span>
+    </header>
     <article>
-        <h2>Give us your honest marks from 0 to 10 and leave a message!</h2>
+        <span class="logoquote"><h2>Give us your honest marks from 0 to 10 and leave a message!</h2></span>
         <form action="Home.html" method="post" name="form">
 
             <label for="speed">Timing:</label>
@@ -36,13 +52,13 @@
             <img class="rimg" src="images/rate_lambo.png" /><br />
             <input class="rate" type="range" id="work" name="work" min="0" max="10" value="5" step="1">
             <textarea id="area" name="area" placeholder="Message..." rows="4" cols="40"></textarea><br><br>
-            <input type="submit" onclick="sub()" value="Send rates" />
+            <input type="submit" onclick="sub()" value="Submit" />
         </form>
 
     </article>
     <footer>
         <p>
-            All rights reserved 2022, Tech Tips Group
+            All rights reserved 2022, TechTips Group
             <a href="https://github.com/InsertNicknameHere00/Web-Project" target="_blank"><img src="images/footericon.png" class="footerlogo"></a>
         </p>
     </footer>

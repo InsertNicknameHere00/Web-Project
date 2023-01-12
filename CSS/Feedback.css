@@ -20,8 +20,6 @@ header {
     background-attachment:fixed;
     background-position: center;
     padding: 10%;
-    text-align: center;
-    font-size: 16px;    
 }
 
 .logo1 {
@@ -53,11 +51,12 @@ nav {
     padding: 1%;
     overflow: hidden;
     background-color: #A9A9A9;
+    color:#5C5D67;
     text-align:right;
     grid-area: nav;
     z-index:1;
-}
-
+  }
+  
     nav a {
         float:inline-block;
         color: #5C5D67;
@@ -67,24 +66,25 @@ nav {
         font-size: 18px;
         z-index:1;
     }
-
+  
         nav a:hover {
             background-color: #5C5D67;
-            color: #f2f2f2;
+            color: white;
             box-shadow: #5C5D67 5px 0px 5px;
             text-decoration:overline;
             transition:background-color 0.5s;
             z-index:1;
+            cursor:pointer;
         }
-
+  
         nav a.active {
-            background-color: transparent;
             text-decoration:overline;
-            color: black;
+            color: white;
+            background-color: #5C5D67;
             box-shadow: none;
             z-index:1;
         }
-
+  
         .navleft {
             display:inline-flex;
             position:fixed;
@@ -95,6 +95,43 @@ nav {
             grid-area: navleft;
             z-index:1;
         }
+  
+        /* Style The Sidebar */
+        .sidebar {
+          display: block;
+          position:relative;
+          padding: 0%;
+          margin:0%;
+          overflow: hidden;
+          background-color: #5C5D67;
+          color:#A9A9A9;
+          text-align:center;
+          grid-area: nav;
+          z-index:1;
+        }
+  
+        ul {
+          list-style-type: none;
+          font-size: 35px;    /* This controls the space between the text */
+        }
+        
+        .sidebar a {
+          float:block;
+          color: #A9A9A9;
+          padding: 0%;
+          margin:0%;
+          text-decoration: none;
+          z-index:1;
+      }
+  
+      .sidebar a.active {
+        background-color: transparent;
+        text-decoration:overline;
+        color: white;
+        box-shadow: none;
+        z-index:1;
+        font-size: 25px;
+    }
 
 
   /* Style The grid container */
@@ -115,7 +152,7 @@ nav {
     padding: 0%;
     justify-content:center;
     background-color: transparent;
-    background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)) ,url("../images/aboutbackground.png");
+    background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)) ,url("../images/formbackground1.jpg");
     background-size: cover;
     background-repeat:no-repeat;
     background-clip: border-box;
@@ -193,10 +230,19 @@ textarea {
 	border-radius: 1%;
 	width: 100%;
 }
+
+/*stylize the logo quote on the header*/
+.logoquote{
+    font-size: 30px;
+    font-weight:600;
+    color:white;
+    float:none;
+  }
   
 /* Responsive Layout */
 @media only screen and (min-width: 1025px) and (max-width: 1920px) { 
-    nav { display: inline-block-block; vertical-align: middle;} 
+    nav { display: inline-block;} 
+    .sidebar{display:none;}
 
     body  {
         grid-template-areas: 
@@ -215,11 +261,13 @@ textarea {
 } 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) { 
-    nav { display: inline-block; vertical-align: middle; } 
+    nav { display: none;} 
+    .sidebar{display:block;}
+    .navleft{ display: none;} 
 
     body  {
         grid-template-areas: 
-          'navleft navleft navleft nav nav nav' 
+          'nav nav nav nav nav nav' 
           'header header header header header header' 
           'middle middle middle middle middle middle' 
           'footer footer footer footer footer footer';
@@ -234,11 +282,13 @@ textarea {
 } 
 
 @media only screen and (min-width: 481px) and (max-width: 767px) { 
-    nav { display: inline-block; vertical-align: middle; } 
+    nav { display: none;} 
+    .sidebar{display:block;}
+    .navleft{ display: none;} 
 
     body  {
         grid-template-areas: 
-        'navleft navleft nav nav' 
+        'nav nav nav nav' 
         'header header header header' 
         'middle middle middle middle' 
         'footer footer footer footer'
@@ -252,11 +302,13 @@ textarea {
 } 
 
 @media only screen and (min-width: 200px) and (max-width: 480px) { 
-    nav { display: inline-block; vertical-align: middle; } 
+    nav { display: none;} 
+    .sidebar{display:block;}
+    .navleft{ display: none;} 
 
     body  {
         grid-template-areas: 
-          'navleft nav' 
+          'nav nav' 
           'header header' 
           'middle middle' 
           'footer footer';

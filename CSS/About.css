@@ -194,16 +194,10 @@ footer {
     color: black;
 }
 
-span{
-    font-size: 25px;
-    font-weight:700;
-    color:#AFD2E9;
-    text-decoration: none;
-}
-
 /*stylize the logo quote on the header*/
 .logoquote{
     font-size: 30px;
+    font-weight:600;
     color:white;
     float:none;
   }

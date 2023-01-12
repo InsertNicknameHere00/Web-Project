@@ -314,17 +314,10 @@ a:link {
     text-align: center;
   }
 
-/*stylize the extra text*/
-span{
-  font-size: 25px;
-  font-weight:700;
-  color:white;
-  text-decoration: none;
-}
-
 /*stylize the logo quote on the header*/
 .logoquote{
   font-size: 30px;
+  font-weight:600;
   color:white;
   float:none;
 }
