@@ -167,7 +167,7 @@ p { display: inline-block; }
   .transition1{
     display: inline-block;
     position: relative;
-    width: 700px;
+    width: 100%;
     height: 200px;
     font-size:0px;
     overflow: hidden;
@@ -179,7 +179,7 @@ p { display: inline-block; }
     background-attachment:local;
     background-position: center;
     border:none;
-    transition: width 1s , height 1s, border-radius 1s, font-size 1s;
+    transition: height 1s, border-radius 1s, font-size 1s;
     animation-name:transitionanim;
     animation-duration: 1s;     
     animation-timing-function: ease-in;
@@ -190,96 +190,96 @@ p { display: inline-block; }
     to{opacity: 1;}
   }
 
-  .transition1:hover{
+.transition1:hover {
     border-radius: 50%;
-    width: 700px;
+    width: 100%;
     height: 400px;
-    font-size:16px;
-  }
+    font-size: 16px;
+}
 
-  .transition2{
+.transition2 {
     display: inline-block;
     position: relative;
-    width: 700px;
+    width: 100%;
     height: 200px;
-    font-size:0px;
+    font-size: 0px;
     overflow: hidden;
     background-color: transparent;
-    background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)) ,url("../images/aboutbackground.png");
+    background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)),url("../images/aboutbackground.png");
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-clip: border-box;
-    background-attachment:local;
+    background-attachment: local;
     background-position: center;
-    border:none;
-    transition: width 1s , height 1s, border-radius 1s, font-size 1s;
-    animation-name:transitionanim;
-    animation-duration: 1s;    
+    border: none;
+    transition: height 1s, border-radius 1s, font-size 1s;
+    animation-name: transitionanim;
+    animation-duration: 1s;
     animation-timing-function: ease-in;
-  }
+}
 
-  .transition2:hover{
-    border-radius: 50%;
-    width: 700px;
-    height: 400px;
-    font-size:16px;
-  }
-  
-  .transition3{
+    .transition2:hover {
+        border-radius: 50%;
+        width: 100%;
+        height: 400px;
+        font-size: 16px;
+    }
+
+.transition3 {
     display: inline-block;
     position: relative;
-    width: 700px;
+    width: 100%;
     height: 200px;
-    font-size:0px;
+    font-size: 0px;
     overflow: hidden;
     background-color: transparent;
-    background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)) ,url("../images/formbackground.jpg");
+    background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)),url("../images/formbackground.jpg");
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-clip: border-box;
-    background-attachment:local;
+    background-attachment: local;
     background-position: center;
-    border:none;
-    transition: width 1s , height 1s, border-radius 1s, font-size 1s;
-    animation-name:transitionanim;
-    animation-duration: 1s;   
+    border: none;
+    transition: height 1s, border-radius 1s, font-size 1s;
+    animation-name: transitionanim;
+    animation-duration: 1s;
     animation-timing-function: ease-in;
-  }
+}
 
-  .transition3:hover{
-    width: 700px;
-    height: 400px;
-    font-size:16px;
-    border-radius: 50%;
-  }
+    .transition3:hover {
+        width: 100%;
+        height: 400px;
+        font-size: 16px;
+        border-radius: 50%;
+    }
 
-  .transition4{
+.transition4 {
     display: inline-block;
     position: relative;
-    width: 700px;
+    width: 100%;
     height: 200px;
-    font-size:0px;
+    font-size: 0px;
     overflow: hidden;
     background-color: transparent;
-    background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)) ,url("../images/Custompc.png");
+    background-image: linear-gradient(to top, rgba(169,169,169, 0.8), rgb(92,93,103, 0.8)),url("../images/Custompc.png");
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-clip: border-box;
-    background-attachment:local;
+    background-attachment: local;
     background-position: center;
-    border:none;
-    transition: width 1s , height 1s, border-radius 1s, font-size 1s;
-    animation-name:transitionanim;
-    animation-duration: 1s;   
+    border: none;
+    transition: height 1s, border-radius 1s, font-size 1s;
+    animation-name: transitionanim;
+    animation-duration: 1s;
     animation-timing-function: ease-in;
-  }
+}
 
-  .transition4:hover{
-    border-radius: 50%;
-    width: 700px;
-    height: 400px;
-    font-size:16px;
-  }
+    .transition4:hover {
+        border-radius: 50%;
+        width: 100%;
+        height: 400px;
+        font-size: 16px;
+    }
 
 
 /* unvisited link */
@@ -325,7 +325,7 @@ a:link {
 .map{
   border:none;
   grid-area: footer;
-  width: 600px;
+  width: 100%;
   height: 400px;
   max-width: 600px;
 }
@@ -345,7 +345,6 @@ a:link {
 
       header{width: 100%;}
       nav{width:100%;}
-      .middle{width: 100%;}
       .span{font-size:auto;}
       .logo1{width: 20%; height: auto;}
       
@@ -387,7 +386,6 @@ a:link {
 
       header{width: 100%;}
       nav{width:100%;}
-      .middle{width: 60%;}
       .span{font-size:auto;}
       .logo1{width: 15%; height: auto;}
       
@@ -408,7 +406,6 @@ a:link {
 
       header{width: 100%;}
       nav{width:100%;}
-      .middle{width: 50%;}
       .span{font-size:auto;}
       .logo1{width: 15%; height: auto;}
       
