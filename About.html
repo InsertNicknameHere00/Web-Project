@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="CSS/About.css">
+    <title>About</title>
+</head>
+<body>
+
+    <div class="navleft">
+        <a href="Home.html"><img src="images/Techtips2.png" class="logo1" alt="Logo"></a>
+        <nav>
+            <a href="Home.html">HOME</a>
+            <a href="Services.html">SERVICES</a>
+            <a class="active" href="About.html">ABOUT</a>
+            <a href="Form.html">APPOINTMENT</a>
+            <a href="Feedback.html">FEEDBACK</a>
+        </nav>
+    </div>
+    <nav class="sidebar">
+        <ul>
+        <li><a href="Home.html">HOME</a></li>
+    <li><a href="Services.html">SERVICES</a></li>
+    <li> <a class="active" href="About.html">ABOUT</a></li>
+    <li><a href="Form.html">APPOINTMENT</a></li>
+    <li><a href="Feedback.html">FEEDBACK</a></li>
+    </ul>
+    </nav>
+    
+    <header>
+        <blockquote><span class="logoquote">“Technology is best when it brings people together.”</span></blockquote>
+        <p class="logoquote">- Matt Mullenweg, Social Media Entrepreneur</p>
+        </header>
+
+    <article class="articleleft">
+        <h2 class="info"><span class="logoquote">Tech Tips</span> is an experienced services agency with decades of collective experience in repairing, consultating and supervising countless projects and customers. We've worked with brands as small as cottage-industry one-person operations all the way to large multinationals like Intel, IBM, and Cisco. Our passion for keeping it simple, being helpful and always there for you makes us a perfect choice for any project, or customer in need of help.
+            </h2>
+            <img src="images/aboutusbg.jpg" alt="" class="bgpic">
+        </article>
+
+        <article class="articleright">
+            <fieldset>
+                <legend><span class="logoquote">Appointment</span></legend>
+                <form action="Form.html" method="post" name="form" id="form">
+                    <label id="labelName" title="Must contain more than 2 characters, only letters" for="name">Name:</label>
+                    <input type="text" id="name" name="Name" value="" placeholder="..." onkeyup="labelName()" required><br>
+                    <label id="labelSurname" title="Must contain more than 2 characters, only letters" for="surname">Surname:</label>
+                    <input type="text" id="surname" name="Surname" placeholder="..." onkeyup="labelSurname()" required><br>
+                    <label id="labelEmail" title="Must use this form: *@*.*" for="email">Email:</label>
+                    <input type="text" id="email" name="E-mail" placeholder="..." onkeyup="labelEmail()" required><br>
+                    <label id="labelPhone" title="Must use this form: 08[7-9]???????" for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="Phone" placeholder="..." onkeyup="labelPhone()" required><br>
+                    <label for="machine">Select Machine:</label>
+                    <select id="machine" name="Machine">
+                        <option value="PC" selected>PC</option>
+                        <option value="LAPTOP">Laptop</option>
+                        <option value="Macbook">Macbook</option>
+                        <option value="IOS">IOS</option>
+                        <option value="Android">Android</option>
+                    </select><br><br>
+                    <label for="service">Select Service:</label>
+                    <select id="service" name="Service">
+                        <option value="clean" selected>Cleaning</option>
+                        <option value="install">Installations</option>
+                        <option value="repair">Repairs</option>
+                        <option value="consultation">Consultation</option>
+                    </select><br><br>
+                    <label title="Don't select today, past dates and dates after 30 days from now!" for="date" id="labelDate">Date:</label>
+                    <input type="date" id="date" name="date" min="2023-01-01" max="2023-02-28" onclick="labelDate()" onkeyup="labelDate()" required><br>
+                    <label title="Work schedule :: Mon-Fri | 08:00-16:00 :: Sat-Sun | not working" id="labelHour" for="hour">Hour:</label>
+                    <input type="number" id="hour" name="hour" min="0" max="23" onclick="labelHour()" onkeyup="labelHour()" required><br>
+                    <label title="Work schedule :: Mon-Fri | 08:00-16:00 :: Sat-Sun | not working" id="labelMinutes" for="minutes">Minutes:</label>
+                    <input type="number" id="minutes" name="minutes" min="0" max="59" onclick="labelHour()" onkeyup="labelHour()" required><br><br>
+                    <button onclick="return submitForm()">Submit</button><br>
+                    <input type="reset" value="Clear">
+                </form>
+        </fieldset>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d321199.8319194849!2d-114.36869883413993!3d51.027718593345014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537165b35b723a65%3A0x89363febb1a4a587!2sTech%20Tips%20%26%20Tech%20Stuff!5e0!3m2!1sbg!2sbg!4v1670772636041!5m2!1sbg!2sbg"></iframe>
+            </article>
+
+            <article class="articleleft1">
+                <h2 class="info"><span class="logoquote">Tech Tips</span> is an experienced services agency with decades of collective experience in repairing, consultating and supervising countless projects and customers. We've worked with brands as small as cottage-industry one-person operations all the way to large multinationals like Intel, IBM, and Cisco. Our passion for keeping it simple, being helpful and always there for you makes us a perfect choice for any project, or customer in need of help.
+                    </h2>
+                    <img src="images/aboutusbg.jpg" alt="" class="bgpic">
+                </article>
+
+                <article class="articleright1">
+                    <h2 class="info"><span class="logoquote">Tech Tips</span> is an experienced services agency with decades of collective experience in repairing, consultating and supervising countless projects and customers. We've worked with brands as small as cottage-industry one-person operations all the way to large multinationals like Intel, IBM, and Cisco. Our passion for keeping it simple, being helpful and always there for you makes us a perfect choice for any project, or customer in need of help.
+                        </h2>
+                        <img src="images/aboutusbg.jpg" alt="" class="bgpic">
+                    </article>
+
+        <footer>All rights reserved 2022, TechTips Group
+            <a href="https://github.com/InsertNicknameHere00/Web-Project" target="_blank"><img src="images/footericon.png" alt="" class="footerlogo"></a>
+        </footer>
+
+</body>
+</html>
