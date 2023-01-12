@@ -35,66 +35,57 @@
         </header>
 
     <article class="articleleft">
-        <h2 class="info"><span class="logoquote">Tech Tips</span> is an experienced services agency with decades of collective experience in repairing, consultating and supervising countless projects and customers. We've worked with brands as small as cottage-industry one-person operations all the way to large multinationals like Intel, IBM, and Cisco. Our passion for keeping it simple, being helpful and always there for you makes us a perfect choice for any project, or customer in need of help.
+        <fieldset>
+            <legend><span class="logoquote">Who are we?</span></legend>
+            <h2 class="info">
+                <span class="logoquote">Tech Tips</span> is an experienced services agency with decades of collective experience in repairing, consultating and supervising countless projects and customers. We've worked with brands as small as cottage-industry one-person operations all the way to large multinationals like Intel, IBM, and Cisco. Our passion for keeping it simple, being helpful and always be there for you!
             </h2>
             <img src="images/aboutusbg.jpg" alt="" class="bgpic">
-        </article>
+        </fieldset>
+            </article>
 
         <article class="articleright">
             <fieldset>
-                <legend><span class="logoquote">Appointment</span></legend>
-                <form action="Form.html" method="post" name="form" id="form">
+                <legend><span class="logoquote">Get your 5% discount coupon</span></legend>
+                <h4 style="color:white;">To get your free 5% discount coupon, you must enter your name, surname, email and authentic key. When you come into our office, you will give it to us in order to validate the discount.</h4><br>
+                <h3 style="color:white;">You make up your own key. The authentication key must be at least 6 characters and no longer than 10 and must contain at least 1 large letter, 1 small letter, 1 digit and 1 special sign: '!' ; '@' ; '#' ; ',' ; '.'</h3>
+                <form action="Home.html" method="post" name="form" id="form">
                     <label id="labelName" title="Must contain more than 2 characters, only letters" for="name">Name:</label>
                     <input type="text" id="name" name="Name" value="" placeholder="..." onkeyup="labelName()" required><br>
                     <label id="labelSurname" title="Must contain more than 2 characters, only letters" for="surname">Surname:</label>
                     <input type="text" id="surname" name="Surname" placeholder="..." onkeyup="labelSurname()" required><br>
                     <label id="labelEmail" title="Must use this form: *@*.*" for="email">Email:</label>
                     <input type="text" id="email" name="E-mail" placeholder="..." onkeyup="labelEmail()" required><br>
-                    <label id="labelPhone" title="Must use this form: 08[7-9]???????" for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="Phone" placeholder="..." onkeyup="labelPhone()" required><br>
-                    <label for="machine">Select Machine:</label>
-                    <select id="machine" name="Machine">
-                        <option value="PC" selected>PC</option>
-                        <option value="LAPTOP">Laptop</option>
-                        <option value="Macbook">Macbook</option>
-                        <option value="IOS">IOS</option>
-                        <option value="Android">Android</option>
-                    </select><br><br>
-                    <label for="service">Select Service:</label>
-                    <select id="service" name="Service">
-                        <option value="clean" selected>Cleaning</option>
-                        <option value="install">Installations</option>
-                        <option value="repair">Repairs</option>
-                        <option value="consultation">Consultation</option>
-                    </select><br><br>
-                    <label title="Don't select today, past dates and dates after 30 days from now!" for="date" id="labelDate">Date:</label>
-                    <input type="date" id="date" name="date" min="2023-01-01" max="2023-02-28" onclick="labelDate()" onkeyup="labelDate()" required><br>
-                    <label title="Work schedule :: Mon-Fri | 08:00-16:00 :: Sat-Sun | not working" id="labelHour" for="hour">Hour:</label>
-                    <input type="number" id="hour" name="hour" min="0" max="23" onclick="labelHour()" onkeyup="labelHour()" required><br>
-                    <label title="Work schedule :: Mon-Fri | 08:00-16:00 :: Sat-Sun | not working" id="labelMinutes" for="minutes">Minutes:</label>
-                    <input type="number" id="minutes" name="minutes" min="0" max="59" onclick="labelHour()" onkeyup="labelHour()" required><br><br>
+                    <label id="labelKey" title="Read the authentication key requirements!" for="key">Authentication key:</label>
+                    <input type="text" id="key" name="Key" placeholder="..." onkeyup="labelKey()" required><br>
                     <button onclick="return submitForm()">Submit</button><br>
                     <input type="reset" value="Clear">
                 </form>
-        </fieldset>
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d321199.8319194849!2d-114.36869883413993!3d51.027718593345014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537165b35b723a65%3A0x89363febb1a4a587!2sTech%20Tips%20%26%20Tech%20Stuff!5e0!3m2!1sbg!2sbg!4v1670772636041!5m2!1sbg!2sbg"></iframe>
+            </fieldset>
+                
             </article>
 
-            <article class="articleleft1">
-                <h2 class="info"><span class="logoquote">Tech Tips</span> is an experienced services agency with decades of collective experience in repairing, consultating and supervising countless projects and customers. We've worked with brands as small as cottage-industry one-person operations all the way to large multinationals like Intel, IBM, and Cisco. Our passion for keeping it simple, being helpful and always there for you makes us a perfect choice for any project, or customer in need of help.
-                    </h2>
-                    <img src="images/aboutusbg.jpg" alt="" class="bgpic">
-                </article>
+        <article class="articleleft1">
+            <fieldset>
+                <legend><span class="logoquote">Where can you find us?</span></legend>
+                <button onclick="changeMap(1)">Sofia</button>
+                <button onclick="changeMap(2)">Plovdiv</button>
+                <button onclick="changeMap(3)">Varna</button>
+                <iframe id="map" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1230483.1777743064!2d23.441820616037244!3d42.496802373032885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8690c6a59ba7%3A0xa0624f4ae1d249e9!2z0J_Qu9Cw0YHQuNC60L4g0JrQvtC80L_RjtGC0YrRgNGBINCV0J7QntCU!5e0!3m2!1sbg!2sbg!4v1673557086281!5m2!1sbg!2sbg"></iframe>
+            </fieldset>
+        </article>
 
                 <article class="articleright1">
-                    <h2 class="info"><span class="logoquote">Tech Tips</span> is an experienced services agency with decades of collective experience in repairing, consultating and supervising countless projects and customers. We've worked with brands as small as cottage-industry one-person operations all the way to large multinationals like Intel, IBM, and Cisco. Our passion for keeping it simple, being helpful and always there for you makes us a perfect choice for any project, or customer in need of help.
-                        </h2>
-                        <img src="images/aboutusbg.jpg" alt="" class="bgpic">
+                    <fieldset >
+                        <legend><span class="logoquote">Want to meet us?</span></legend>
+                        <h3 style="color:white;">We sound like the right people for you? Click the big, red button in order to get one step closer to meeeting us!</h3>
+                        <a href="Form.html"><img src="images/button.png" class="bgpic"></a>
+                    </fieldset>
                     </article>
 
         <footer>All rights reserved 2022, TechTips Group
             <a href="https://github.com/InsertNicknameHere00/Web-Project" target="_blank"><img src="images/footericon.png" alt="" class="footerlogo"></a>
         </footer>
-
+    <script src="JS/About.js"></script>
 </body>
 </html>

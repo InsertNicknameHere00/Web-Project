@@ -4,7 +4,8 @@
 function checkName(name) {
     if (name.length < 3) return false;
     for (var i = 0; i < name.length; i++) {
-        if (!((name[i] >= 'a' && name[i] <= 'z') || (name[i] >= 'A' && name[i] <= 'Z'))) return false;
+        if (i != 0 && !(name[i] >= 'a' && name[i] <= 'z')) return false;
+        else if (i == 0 && !(name[i] >= 'A' && name[i] <= 'Z')) return false;
     }
     return true;
 }
